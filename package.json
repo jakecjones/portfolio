@@ -1,0 +1,62 @@
+{
+  "name": "roxy-vue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dns": "^0.2.2",
+    "express": "^4.16.4",
+    "firebase": "^5.5.8",
+    "firebase-admin": "^6.3.0",
+    "firebase-functions": "^2.1.0",
+    "firebaseui": "^3.4.1",
+    "ssh2": "^0.8.2",
+    "stripe": "^6.18.0",
+    "vue": "^2.6.6",
+    "vue-analytics": "^5.16.2",
+    "vue-browser-detect-plugin": "^0.1.2",
+    "vue-carousel": "^0.17.0",
+    "vue-stripe": "^0.1.52",
+    "vuefire": "^2.0.0-alpha.15"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-eslint": "^3.1.1",
+    "@vue/cli-service": "^3.1.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
+    "vue-template-compiler": "^2.6.6"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
