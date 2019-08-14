@@ -2,13 +2,13 @@
   <section class="display">
 
     <div class="slider" :style="{backgroundColor: $parent.backgroundOne}" >
-      <div class="sliderTwo" :style="{borderBottom: ' 120px solid ' + $parent.contrastBackground}"></div>
+      <div class="slantLeft" :style="{borderBottom: ' 50px solid ' + $parent.contrastBackground}"></div>
 
           <div class="slide">
             
             <div class="page-heading">
             <h1 :style="{color: $parent.colorOne}">Jake Jones</h1>
-            <p :style="{color: $parent.colorOne}">Web Developer <br> & creative dude</p>
+            <p :style="{color: $parent.colorOne}">Web Developer <br> & creative dude.</p>
             <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Contact Now</button></router-link>
           </div>
             <div class="svg-container">
@@ -43,9 +43,51 @@
 
     <section class="sub-section-heading" :style="{backgroundColor: $parent.contrastBackground}">
       <div class="page-heading">
-        <h2 :style="{color: $parent.colorTwo}">Tools</h2>
+        <h2 :style="{color: $parent.colorTwo}">Proud Papa</h2>
+        <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+
       </div>
     </section>
+
+    <section class="section ar-section" :style="{backgroundColor: $parent.backgroundOne}">
+        <model-viewer
+          experimental-pmrem 
+          preload 
+          ar 
+          magic-leap
+          auto-rotate="true"
+          camera-orbit="45deg 55deg 2.5m"
+          class="model" 
+          poster="/static/loading-bg.svg" 
+          src="/static/header-model.glb" 
+          ios-src="/static/header-model.usdz" 
+          camera-controls 
+          :background-color="$parent.backgroundTwo" 
+          >
+          </model-viewer>
+
+          <div class="section__info">
+             <h2 :style="{color: $parent.colorOne}">Augmented Reality</h2>
+             <p :style="{color: $parent.colorOne}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+          </div>
+      </section>
+
+      <section class="section stripe-section">
+          <div class="section__info">
+             <h2 :style="{color: $parent.colorTwo}">Stripe Integration</h2>
+             <p :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+          </div>
+          <div class="slantRight" :style="{borderBottom: ' 100px solid' + $parent.backgroundTwo }"></div>
+      </section>
+
+      <section class="section profile-section " :style="{backgroundColor: $parent.backgroundTwo}">
+        <div class="section__info">
+          <h2 :style="{color: $parent.colorOne}">Stripe Integration</h2>
+          <p :style="{color: $parent.colorOne}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+        </div>
+        <div class="slantRight" :style="{borderBottom: ' 140px solid #fff' }"></div>
+      </section>
+
 
 
 
@@ -133,10 +175,11 @@ export default {
 /* svg styles */
 
   .page-heading {
-    width: 60%;
+    width: 90%;
     display: flex;
     flex-flow: column;
     justify-content: center;
+
   }
   .svg-container {
     width: 40%;
@@ -226,11 +269,21 @@ export default {
 
 // }
 
-.sliderTwo {
+.slantLeft {
     position: absolute;
     content: "";
-    border-bottom: 120px solid  #393939;
     border-right: 100vw solid transparent;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.slantRight {
+    position: absolute;
+    content: "";
+    border-left: 100vw solid transparent;
     height: 0;
     width: 0;
     bottom: 0;
@@ -259,13 +312,26 @@ export default {
 }
 
 .page-heading h2 {
-  padding: 2em 0 0 0;
-  width: auto;
-  margin: 0 0 20px 100px;
+  padding: 0;
+  width: 90%;
+  margin: 0 auto;
   text-align: left;
   position: relative;
   z-index: 1;
 }
+
+.page-heading p.description {
+  font-size: 16px;
+  padding: 0;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 1;
+  text-align: left;
+  position: relative;
+  color: #393939;
+  max-width: 1200px;
+}
+
 .slide p {
   font-size: 2em;
   padding: 10px 0 2px 0;
@@ -291,7 +357,7 @@ export default {
   font-style: italic;
   position: relative;
   z-index: 1;
-  box-shadow: 3px 3px 15px #666;
+  // box-shadow: 3px 3px 15px #666;
 }
 
 .sub-section-heading {
@@ -301,8 +367,43 @@ export default {
   display: flex;
   justify-content: center;  
   h2 {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+
+  }
+}
+.stripe-section {
+  background-color: #6150d0;
+}
+.section {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  .model {
+    width: 40%;
+    height: 500px;
+    outline: none;
+  }
+  &__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h2 {
+      width: 80%;
+      font-size: 4vw;
+      margin: 0 auto;
+      text-align: left;
+    }
+    p {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+    }
   }
 }
 
@@ -334,7 +435,7 @@ export default {
   .page-heading h2 {
     font-size: 2.4em;
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     text-align: left;
     font-weight: 900;
   }
