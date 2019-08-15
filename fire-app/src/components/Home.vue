@@ -8,7 +8,10 @@
             
             <div class="page-heading">
             <h1 :style="{color: $parent.colorOne}">Jake Jones</h1>
-            <p :style="{color: $parent.colorOne}">Web Developer <br> & creative dude.</p>
+            <p :style="{color: $parent.colorOne}">Web Developer <br>
+            & Designer
+            <!-- <vue-typer class="slider__typer" :text="typer" erase-style='backspace' pre-type-delay='100'></vue-typer> -->
+            </p>
             <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Contact Now</button></router-link>
           </div>
             <div class="svg-container">
@@ -43,7 +46,7 @@
 
     <section class="sub-section-heading" :style="{backgroundColor: $parent.contrastBackground}">
       <div class="page-heading">
-        <h2 :style="{color: $parent.colorTwo}">Proud Papa</h2>
+        <h2 :style="{color: $parent.colorTwo}">Proud Papa.</h2>
         <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
 
       </div>
@@ -55,7 +58,6 @@
           preload 
           ar 
           magic-leap
-          auto-rotate="true"
           camera-orbit="45deg 55deg 2.5m"
           class="model" 
           poster="/static/loading-bg.svg" 
@@ -67,15 +69,25 @@
           </model-viewer>
 
           <div class="section__info">
-             <h2 :style="{color: $parent.colorOne}">Augmented Reality</h2>
-             <p :style="{color: $parent.colorOne}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+             <h2 :style="{color: $parent.colorOne}">Augmented Reality.</h2>
+             <p :style="{color: $parent.colorOne}">AR within the web is easily the most exciting tool for me to have worked on and talk about. Ultimatey I was able to create an ecosystem for streamlining the conversion process of flat artwork images into 3d models. This project made use of three.js, SSH, xCode, webGL, javascript, vue.js, firebase and GCP. Feel free to try the free demo on <a href="http://roxyartmarket.com" target="_blank">roxyartmarket.com </a></p>
           </div>
+
+                <img class="ar-glow" src="/static/neon-ar.svg" alt="jake jones lamp logo">
+                <img class="ar-glow" src="/static/neon-ar-glow.png" alt="jake jones lamp logo">
+                <img class="ar-glow" src="/static/neon-ar-glow.png" alt="jake jones lamp logo">
+
       </section>
 
       <section class="section stripe-section">
           <div class="section__info">
-             <h2>Stripe Integration</h2>
-             <p>I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+             <h2>Stripe Integration.</h2>
+             <p>The day was July 22nd and the time 4:30am. For the first time in my life I had stayed up 48 hours to finish a project, launch a site, and hard code our Stripe payment logic. With a blank sheet of white paper and a sharpie, I was victorious in my feat. 
+             <br><br>My strong suits as a developer have always been frontend development, and since I started this career I was encouraged to stay away from coding payment logic. It was encouraging to put this task under my belt and move forward confidently despite the many challenges I faced.
+            </p>
+          </div>
+          <div class="mockup">
+            <img src="/static/stripe-example.png">
           </div>
           <div class="slantRight" :style="{borderBottom: ' 100px solid' + $parent.backgroundTwo }"></div>
       </section>
@@ -86,7 +98,13 @@
           <img src="/static/profile-mockup.png">
         </div>
         <div class="section__info">
-          <h2 :style="{color: $parent.colorOne}">Create a profile.</h2>
+
+                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
+                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
+
+                <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
+
+          <h2 :style="{color: $parent.colorOne}">Create a platform.</h2>
           <p :style="{color: $parent.colorOne}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
         </div>
         <div class="slantRight" :style="{borderBottom: ' 140px solid #fff' }"></div>
@@ -127,6 +145,11 @@ export default {
       image: '',
       slideId: '',
       heroSection: [],
+      typer: [
+          "Designer.",
+          "Engineer.",
+          "Creative dude."
+      ],
       data: [
         {
         id: 0,
@@ -169,7 +192,7 @@ export default {
 
 <style lang="scss" scoped>
 
-$break-small: 750px;
+$break-small: 800px;
 
 
 * {
@@ -221,9 +244,27 @@ $break-small: 750px;
      animation: lamp 2s ease-in alternate infinite;
   }
 
+  .decor-glow {
+     width: 200px;
+     position: absolute;
+     right: 100px;
+     top: 0;
+     opacity: 1;
+     animation: lamp 2s ease-in alternate infinite;
+  }
+
+    .ar-glow {
+     width: 150px;
+     position: absolute;
+     right: 10px;
+     bottom: 10px;
+     opacity: 1;
+     animation: lamp 2s ease-in alternate infinite;
+  }
 
 
-  .st0{fill:none;stroke:#42e5d8;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+  .st0{fill:none;stroke:#42e5d8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 
   // .st0 {
   //     stroke-dasharray: 800;
@@ -241,7 +282,7 @@ $break-small: 750px;
   .page-heading h1 {
     font-family: 'avenir', sans-serif;
     font-weight: bold;
-    font-size: 8vw;
+    font-size: 7vw;
   }
   .page-heading h2 {
     font-family: 'avenir', sans-serif;
@@ -335,7 +376,7 @@ $break-small: 750px;
   text-align: left;
   position: relative;
   color: #393939;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .slide p {
@@ -364,6 +405,7 @@ $break-small: 750px;
   font-style: italic;
   position: relative;
   z-index: 1;
+  border-radius: 10px;
   // box-shadow: 3px 3px 15px #666;
 }
 
@@ -376,9 +418,9 @@ $break-small: 750px;
   h2 {
     margin: 0 auto;
     width: 90%;
-    max-width: 1200px;
-
+    max-width: 1000px;
   }
+
 }
 .stripe-section {
   background-color: #46ce90;
@@ -401,6 +443,21 @@ $break-small: 750px;
       height: 90%;
     }
   }
+
+  .mockup {
+    width: 45%;
+    height: inherit;
+    outline: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 80%;
+      position: absolute;
+      z-index: 20;
+    }
+  }
   &__info {
     width: 50%;
     display: flex;
@@ -411,13 +468,14 @@ $break-small: 750px;
     h2 {
       width: 80%;
       font-size: 4vw;
-      margin: 0 auto;
+      margin: 0 auto 15px auto;
       text-align: left;
     }
     p {
       width: 80%;
       margin: 0 auto;
       text-align: left;
+      line-height: 1.6em;
     }
   }
   @media screen and (max-width: $break-small) {
@@ -425,17 +483,39 @@ $break-small: 750px;
 
       flex-direction: column;
       height: auto;
+      
       .model {
       width: 100%;
       height: 500px;
       }
+
+      .mockup {
+        width: 100%;
+        height: 400px;
+        outline: none;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin-top: -80px;
+
+        img {
+          height: unset;
+          width: 100%;
+          position: relative;
+          bottom: unset;
+          z-index: 20;
+          margin-top: -80px;
+
+
+        }
+      }
       &__info {
         width: 100%;
-        padding: 6em 0;
+        padding: 5em 0;
         h2 {
         width: 80%;
         font-size: 8vw;
-        margin: 0 auto 5px auto;
         text-align: left;
       }
       p {

@@ -38,7 +38,7 @@ export default {
         this.contrastBackground = '#eee'
         this.colorOne = '#fff'
         this.colorTwo = '#444'
-        this.accentOne = '#03dd3a'
+        this.accentOne = '#46ce90'
       } else {
         this.onSwitch = 0
         this.backgroundOne = '#eee'
@@ -57,6 +57,11 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
+a {
+  color: #46ce90;
+  text-decoration: none;
+  font-weight: bold;
+}
 * {
   transition: all .35s ease-in-out;
 }
