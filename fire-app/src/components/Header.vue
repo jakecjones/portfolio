@@ -82,7 +82,7 @@ export default {
   position: fixed;
   top: 25px;
   left: 30px;
-  width: 40px;
+  width: 50px;
   z-index: 9999999;
   text-align: center;
   padding: 0 5px 5px 5px;
@@ -167,7 +167,7 @@ select {
     position: absolute;
     top: 8px;
     right: 1.5em;
-    font-family: "avenir", sans-serif;
+    font-family: 'avenir', 'nunito sans', sans-serif;
     text-transform: lowercase;
     letter-spacing: 2px;
     background: #FFF;
@@ -262,7 +262,7 @@ input[type="text"].searchExpand {
 .beta {
   color: #fff;
   display: inline-block;
-  font-family: 'avenir', sans-serif;
+  font-family: 'avenir', 'nunito sans', sans-serif;
   font-weight: 300;
   font-size: 1em;
   text-transform: uppercase;
@@ -401,7 +401,7 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: "source sans pro", "avenir", sans-serif;
+  font-family: 'avenir', 'nunito sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: lighter;
@@ -428,7 +428,7 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: "source sans pro", "avenir", sans-serif;
+  font-family: 'avenir', 'nunito sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: lighter;

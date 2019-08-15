@@ -1,34 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 576 576" style="enable-background:new 0 0 576 576;" xml:space="preserve">
 <style type="text/css">
-	.st0{clip-path:url(#SVGID_2_);}
-	.st1{clip-path:url(#SVGID_4_);fill:#333;}
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{clip-path:url(#SVGID_2_);fill:none;}
+	
+		.st3{clip-path:url(#SVGID_2_);fill:none;stroke:#00DCDD;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#00DCDD;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
-<g id="Artwork_5">
-	<g>
-		<defs>
-			<rect id="SVGID_1_" x="36" y="36" width="504" height="504"/>
-		</defs>
-		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-		</clipPath>
-		<g class="st0">
+<g id="Layer_1" class="st0">
+	<g class="st1">
+		<g id="Artwork_5">
 			<defs>
-				<rect id="SVGID_3_" x="36" y="36" width="504" height="504"/>
+				<rect id="SVGID_1_" x="36" y="36" width="504" height="504"/>
 			</defs>
-			<clipPath id="SVGID_4_">
-				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 			</clipPath>
-			<path class="st1" d="M375.3,540H200.7C109.9,540,36,466.1,36,375.3V200.7C36,109.9,109.9,36,200.7,36h174.6
+			<rect x="36" y="36" class="st2" width="504" height="504"/>
+			<rect x="36" y="36" class="st2" width="504" height="504"/>
+			<path class="st3" d="M375.3,540H200.7C109.9,540,36,466.1,36,375.3V200.7C36,109.9,109.9,36,200.7,36h174.6
 				C466.1,36,540,109.9,540,200.7v174.6C540,466.1,466.1,540,375.3,540 M200.7,80.4c-66.4,0-120.3,54-120.3,120.4v174.6
-				c0,66.4,53.9,120.4,120.3,120.4h174.6c66.4,0,120.4-54,120.4-120.4V200.7c0-66.4-54-120.4-120.4-120.4H200.7z"/>
-			<path class="st1" d="M288,421c-73.3,0-133-59.7-133-133.1c0-73.3,59.7-133,133-133s133,59.6,133,133C421,361.4,361.4,421,288,421
-				 M288,199.4c-48.9,0-88.7,39.8-88.7,88.6c0,48.9,39.8,88.6,88.7,88.6s88.6-39.7,88.6-88.6C376.6,239.1,336.9,199.4,288,199.4"/>
-			<path class="st1" d="M438.5,157.6c0,16.9-13.7,30.7-30.7,30.7c-16.9,0-30.7-13.7-30.7-30.7c0-16.9,13.8-30.6,30.7-30.6
+				c0,66.4,53.9,120.4,120.3,120.4h174.6c66.4,0,120.4-54,120.4-120.4V200.7c0-66.4-54-120.4-120.4-120.4H200.7V80.4z"/>
+			<rect x="36" y="36" class="st2" width="504" height="504"/>
+			<path class="st3" d="M288,421c-73.3,0-133-59.7-133-133.1c0-73.3,59.7-133,133-133s133,59.6,133,133C421,361.4,361.4,421,288,421
+				 M288,199.4c-48.9,0-88.7,39.8-88.7,88.6c0,48.9,39.8,88.6,88.7,88.6s88.6-39.7,88.6-88.6S336.9,199.4,288,199.4"/>
+			<path class="st3" d="M438.5,157.6c0,16.9-13.7,30.7-30.7,30.7c-16.9,0-30.7-13.7-30.7-30.7c0-16.9,13.8-30.6,30.7-30.6
 				C424.8,126.9,438.5,140.7,438.5,157.6"/>
 		</g>
+	</g>
+	<g class="st1">
+		
+			<image style="overflow:visible;" width="580" height="580" xlink:href="6CDE9DC01BD2F49E.png"  transform="matrix(1 0 0 1 -2 -2)">
+		</image>
+	</g>
+	<g class="st1">
+		
+			<image style="overflow:visible;" width="580" height="580" xlink:href="6CDE9DC01BD2F499.png"  transform="matrix(1 0 0 1 -2 -2)">
+		</image>
+	</g>
+</g>
+<g id="Layer_2">
+	<path class="st4" d="M373.5,540h-171C110.5,540,36,465.5,36,373.5v-171C36,110.5,110.5,36,202.5,36h171
+		c92,0,166.5,74.5,166.5,166.5v171C540,465.5,465.5,540,373.5,540z"/>
+	<circle class="st4" cx="288" cy="288" r="129.5"/>
+	<circle class="st4" cx="414.7" cy="152.7" r="29.6"/>
+	<g>
+		
+			<image style="overflow:visible;" width="580" height="580" xlink:href="6CDE9DC01BD2F49A.png"  transform="matrix(1 0 0 1 -2 -2)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="336" height="336" xlink:href="6CDE9DC01BD2F49B.png"  transform="matrix(1 0 0 1 120 120)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="136" height="136" xlink:href="6CDE9DC01BD2F4A5.png"  transform="matrix(1 0 0 1 347 85)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="580" height="580" xlink:href="6CDE9DC01BD2F4A7.png"  transform="matrix(1 0 0 1 -2 -2)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="336" height="336" xlink:href="6CDE9DC01BD2F4AA.png"  transform="matrix(1 0 0 1 120 120)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="136" height="136" xlink:href="6CDE9DC01BD2F4AB.png"  transform="matrix(1 0 0 1 347 85)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="580" height="580" xlink:href="6CDE9DC01BD2F4AD.png"  transform="matrix(1 0 0 1 -2 -2)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="336" height="336" xlink:href="BC2CCCC4057D5AB6.png"  transform="matrix(1 0 0 1 120 120)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="136" height="136" xlink:href="BC2CCCC4057D5AB1.png"  transform="matrix(1 0 0 1 347 85)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="580" height="580" xlink:href="BC2CCCC4057D5AB2.png"  transform="matrix(1 0 0 1 -2 -2)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="336" height="336" xlink:href="BC2CCCC4057D5AB0.png"  transform="matrix(1 0 0 1 120 120)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="136" height="136" xlink:href="BC2CCCC4057D5ACE.png"  transform="matrix(1 0 0 1 347 85)">
+		</image>
 	</g>
 </g>
 </svg>

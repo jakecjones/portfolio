@@ -12,7 +12,7 @@
             & Designer
             <!-- <vue-typer class="slider__typer" :text="typer" erase-style='backspace' pre-type-delay='100'></vue-typer> -->
             </p>
-            <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Contact Now</button></router-link>
+            <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Contact</button></router-link>
           </div>
             <div class="svg-container">
 
@@ -40,11 +40,21 @@
                 <img class="lamp-glow" src="/static/lamp-glow.png" alt="jake jones lamp logo">
                 <img class="lamp-glow" src="/static/lamp-glow.png" alt="jake jones lamp logo">
 
+                  <div @click="$parent.darkMode = !$parent.darkMode" class="dark-mode" :style="{backgroundColor: $parent.colorOne}">
+                    <div :style="{ backgroundColor: $parent.colorTwo}" class="line"></div>
+                    <div :style="{ left: $parent.onSwitch + 'px', borderColor: $parent.colorTwo, backgroundColor: $parent.colorOne}" class="circle"></div>
+                  </div>
+
             </div>
           </div>
     </div>
 
     <section class="sub-section-heading" :style="{backgroundColor: $parent.contrastBackground}">
+
+      <img class="decor-left" src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
+      <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
+      <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
+
       <div class="page-heading">
         <h2 :style="{color: $parent.colorTwo}">Proud Papa.</h2>
         <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
@@ -107,14 +117,9 @@
           <h2 :style="{color: $parent.colorOne}">Create a platform.</h2>
           <p :style="{color: $parent.colorOne}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
         </div>
-        <div class="slantRight" :style="{borderBottom: ' 140px solid #fff' }"></div>
       </section>
 
-
-
-
-    <!-- <Links :key="$route.fullPath" />
-    <Footer :key="$route.fullPath" /> -->
+    <Footer/> 
 
 
 
@@ -127,7 +132,6 @@
 <script>
 import { firestore } from '../main'
 import firebase from 'firebase'
-import Links from './Links.vue'
 import Footer from './Footer.vue'
 import { Carousel, Slide } from 'vue-carousel'
 import { page } from 'vue-analytics'
@@ -176,7 +180,6 @@ export default {
     }
   },
   components: {
-    Links,
     Footer,
     Carousel,
     Slide
@@ -188,32 +191,19 @@ export default {
     }
 }
 </script>
-
-
-<style lang="scss" scoped>
+<style lang="scss" >
 
 $break-small: 800px;
 
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* svg styles */
-
-  .page-heading {
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-
-  }
   .svg-container {
     width: 40%;
     position: absolute;
     bottom: 0;
     right: 2vw;
+      @media screen and (max-width: $break-small) {
+        width: 45%;
+      }
   }
 
   svg {
@@ -235,36 +225,146 @@ $break-small: 800px;
 }
 
 
-  .lamp-glow {
-     width: 80%;
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     opacity: 1;
-     animation: lamp 2s ease-in alternate infinite;
-  }
+      .lamp-glow {
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        animation: lamp 2s ease-in alternate infinite;
+      }
 
-  .decor-glow {
-     width: 200px;
-     position: absolute;
-     right: 100px;
-     top: 0;
-     opacity: 1;
-     animation: lamp 2s ease-in alternate infinite;
-  }
+      .decor-glow {
+        width: 200px;
+        position: absolute;
+        right: 100px;
+        top: 0;
+        opacity: 1;
+        animation: lamp 2s ease-in alternate infinite;
+      }
 
-    .ar-glow {
-     width: 150px;
-     position: absolute;
-     right: 10px;
-     bottom: 10px;
-     opacity: 1;
-     animation: lamp 2s ease-in alternate infinite;
-  }
+        .ar-glow {
+        width: 150px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        opacity: 1;
+        animation: lamp 2s ease-in alternate infinite;
+      }
+      .decor-left {
+        width: 150px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        animation: lamp 2s ease-in alternate infinite;
+      }
+
+        @media screen and (max-width: $break-small) {
+          .lamp-glow {
+            width: 80%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 1;
+            animation: lamp 2s ease-in alternate infinite;
+          }
+
+          .decor-glow {
+            width: 100px;
+            position: absolute;
+            right: 30px;
+            top: -50px;
+            opacity: 1;
+            animation: lamp 2s ease-in alternate infinite;
+            z-index: 20;
+          }
+
+            .ar-glow {
+            width: 80px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+            animation: lamp 2s ease-in alternate infinite;
+          }
+          .decor-left {
+            width: 110px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 1;
+            animation: lamp 2s ease-in alternate infinite;
+          }
+    }
 
 
 
   .st0{fill:none;stroke:#42e5d8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+
+</style>
+
+
+<style lang="scss" scoped>
+
+$break-small: 800px;
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* svg styles */
+
+.dark-mode {
+  background-color: red;
+  position: absolute;
+  top: -12vw;
+  left: 48%;
+  width: 40px;
+  z-index: 9999999;
+  text-align: center;
+  padding: 10px 10px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+
+    .line {
+      width: calc(100% - 25px);
+      height: 3px;
+      background-color: #444;
+      margin: 3px;
+      border-radius: 10px;
+      position: absolute;
+      left: 10px;
+      top: 12px;
+    }
+    .circle {
+      width: 10px;
+      height: 10px;
+      border: 2px solid #444;
+      border-radius: 50%;
+      position: absolute;
+      transition: all .35s ease-in-out;
+      background-color: #fff;
+    }
+
+      @media screen and (max-width: $break-small) {
+        display:none;
+      }
+}
+
+  .page-heading {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+  }
 
   // .st0 {
   //     stroke-dasharray: 800;
@@ -280,15 +380,16 @@ $break-small: 800px;
   // }
 
   .page-heading h1 {
-    font-family: 'avenir', sans-serif;
+    font-family: 'avenir', 'nunito sans', sans-serif;
     font-weight: bold;
     font-size: 7vw;
   }
   .page-heading h2 {
-    font-family: 'avenir', sans-serif;
+    font-family: 'avenir', 'nunito sans', sans-serif;
     font-weight: bold;
     font-size: 4vw;
     color: #393939;
+    
   }
 
 
@@ -388,6 +489,8 @@ $break-small: 800px;
   text-align: left;
   position: relative;
   color: #393939;
+  font-style: italic;
+
 }
 .slide button {
   font-size: 1.1em;
@@ -399,10 +502,9 @@ $break-small: 800px;
   border: 2px solid #569664;
   float: left;
   color: #fff;
-  font-weight: 400;
-  font-family: 'avenir', sans-serif;
+  font-weight: 700;
+  font-family: 'avenir', 'nunito sans', sans-serif;
   letter-spacing: 0.3em;
-  font-style: italic;
   position: relative;
   z-index: 1;
   border-radius: 10px;
@@ -415,6 +517,7 @@ $break-small: 800px;
   margin: 0;
   display: flex;
   justify-content: center;  
+  position: relative;
   h2 {
     margin: 0 auto;
     width: 90%;
@@ -445,7 +548,7 @@ $break-small: 800px;
   }
 
   .mockup {
-    width: 45%;
+    width: 40%;
     height: inherit;
     outline: none;
     display: flex;
@@ -453,7 +556,7 @@ $break-small: 800px;
     align-items: center;
     justify-content: center;
     img {
-      height: 80%;
+      height: 75%;
       position: absolute;
       z-index: 20;
     }
@@ -501,7 +604,7 @@ $break-small: 800px;
 
         img {
           height: unset;
-          width: 100%;
+          width: 90%;
           position: relative;
           bottom: unset;
           z-index: 20;
@@ -548,14 +651,14 @@ $break-small: 800px;
 
   .page-heading h1 {
     font-size: 2.8em;
-    width: 90%;
+    width: 70%;
     margin: -1.5em auto 0 auto;
     text-align: left;
     font-weight: 900;
   }
   .page-heading h2 {
     font-size: 2.4em;
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     text-align: left;
     font-weight: 900;
@@ -563,7 +666,7 @@ $break-small: 800px;
   .slide p {
     font-size: 2em;
     padding: 0;
-    width: 90%;
+    width: 70%;
     margin: 0 auto 15px auto;
     text-align: left;
   }
@@ -571,15 +674,13 @@ $break-small: 800px;
     font-size: .9em;
     padding: 1em 2em;
     width: auto;
-    margin-left: 5%;
+    margin-left: 15%;
     background-color: #569664;
     border: 2px solid #569664;
     float: left;
     color: #fff;
-    font-weight: 400;
-    font-family: 'avenir', sans-serif;
+    font-family: 'avenir', 'nunito sans', sans-serif;
     letter-spacing: 0.3em;
-    font-style: italic;
   }
 
 

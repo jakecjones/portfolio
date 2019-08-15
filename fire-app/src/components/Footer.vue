@@ -1,34 +1,22 @@
 <template>
   <section>
-    <footer>
+    <footer> 
       <div class="footer-group">
-        <h3>Lamplight</h3>
+        <!-- <h3>Jake Jones</h3> -->
         <ul>
-          <router-link to="/"><li>Home</li></router-link>
-          <router-link to="/portfolio"><li>Portfolio</li></router-link>
+          <router-link to="/"><li>Work</li></router-link>
+          <router-link to="/tools"><li>Tools</li></router-link>
+          <router-link to="/contact"><li>Contact</li></router-link>
         </ul>
       </div>
-      <div class="footer-group">
-        <h3>Resources</h3>
-        <ul>
-        <router-link to="/about"><li>About</li></router-link>
-        <router-link to="/careers"><li>Careers</li></router-link>
-        <router-link to="/contact"><li>Contact</li></router-link>
-      </ul>
-      </div>
 
-      <div class="footer-group">
-        <!-- <router-link to="/addartwork"><img src="../assets/icons/logo.svg"></router-link> -->
-        <br>
-        <!-- <p>Active Users: <strong>{{users.length}}</strong></p> -->
-      </div>
+
       <div class="footer-group-3">
-        <a href="https://www.facebook.com/lamplightheritage" target="_blank"><img src="../assets/icons/fb.svg"></a>
-        <a href="https://www.instagram.com/lamplightheritage/" target="_blank"><img src="../assets/icons/insta.svg"></a>
-        <a href="https://twitter.com/llightheritage" target="_blank"><img src="../assets/icons/twitter.svg"></a>
+        <a href="https://github.com/jakecjones" target="_blank"><img src="../assets/icons/github-01.png"></a>
+        <a href="https://www.instagram.com/jak3jon3s/" target="_blank"><img src="../assets/icons/insta-01.png"></a>
       </div>
       <div class="footer-group-2">
-        <h3>© 2019 Lamplight Heritage. All rights reserved.</h3>
+        <h3>© 2019 Jake Jones. All rights reserved.</h3>
       </div>
 
 
@@ -83,9 +71,10 @@ footer {
   height: auto;
   position: relative;
   bottom: 0;
-  background-color: #fff;
+  background-color: #333;
+  color: #fff;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   z-index: 99999;
 }
 
@@ -95,7 +84,7 @@ footer {
   left: 2em;
 }
 .footer-group-3 a img{
-  width: 20px;
+  width: 40px;
   height: auto;
   display: block;
   margin: 1.2em 0;
@@ -103,10 +92,10 @@ footer {
 
 .footer-group {
   font-size: 1.2em;
-  width: auto;
+  width: 85%;
   height: 100%;
-  text-align: left;
-  margin: 1em 2em 4em 2em;
+  margin: 1em 2em 1.5em 4em;
+  text-align: right;
 }
 .footer-group img {
   width: 50px;
@@ -116,16 +105,20 @@ footer {
 .footer-group ul {
   list-style: circle;
   display: block;
+  float: right;
+  
 }
 .footer-group h3 {
-  font-size: 1em;
+  font-size: 2em;
 }
 .footer-group ul li {
   display: block;
   text-align: left;
   padding: 2px 0;
   margin: 0;
-  font-size: .9em;
+  font-size: 2em;
+  text-align: left;
+
 
   /* list-style: circle; */
 }
@@ -167,19 +160,24 @@ span {
   }
   .footer-group {
     font-size: 1em;
-    width: 40%;
+    width: 100%;
     height: auto;
     text-align: center;
-    margin: 0 5px;
-    display: inline-block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     vertical-align: top;
-
+    padding: 2em 0 0 0;
   }
   .footer-group ul li{
     text-align: center;
     padding: 2px 0;
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: left;
+    display: inline-block;
+    margin: 0 10px;
+
   }
   .footer-group-3 {
     position: relative;
@@ -200,7 +198,7 @@ span {
   .footer-group-3 a img{
     display: inline-block;
     margin: 15px 10px 0 10px;
-    width: 30px;
+    width: 50px;
 
   }
   .footer-group h3 {

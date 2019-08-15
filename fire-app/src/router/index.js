@@ -1,12 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Portfolio from '@/components/Portfolio'
-import Links from '@/components/Links'
 import Home from '@/components/Home'
+import Tools from '@/components/Tools'
 import Contact from '@/components/Contact'
-import Careers from '@/components/Careers'
-import About from '@/components/About'
-import ThreeD from '@/components/3d'
 import PageNotFound from '@/components/PageNotFound'
 
 
@@ -19,34 +15,14 @@ let router = new Router({
   routes: [
     { path: "*", component: PageNotFound },
     {
-      path: '/portfolio',
-      name: 'portfolio',
-      component: Portfolio
-    },
-    {
-      path: '/careers',
-      name: 'careers',
-      component: Careers
-    },
-    {
-      path: '/3d',
-      name: 'ThreeD',
-      component: ThreeD
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About
-    },
-    {
       path: '/',
       name: 'home',
       component: Home
     },
     {
-      path: '/links',
-      name: 'links',
-      component: Links
+      path: '/tools',
+      name: 'tools',
+      component: Tools
     },
     {
       path: '/contact',

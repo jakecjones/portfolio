@@ -19,7 +19,7 @@ export default {
     return {
       darkMode: false,
       checkDark: false,
-      onSwitch: 0,
+      onSwitch: 10,
       backgroundOne: '#eee',
       backgroundTwo: '#fff',
       contrastBackground: '#393939',
@@ -40,7 +40,7 @@ export default {
         this.colorTwo = '#444'
         this.accentOne = '#46ce90'
       } else {
-        this.onSwitch = 0
+        this.onSwitch = 10
         this.backgroundOne = '#eee'
         this.backgroundTwo = '#fff'
         this.contrastBackground = '#393939'
@@ -98,7 +98,7 @@ html,body {
   font-size: 1.8em;
 }
 .info p {
-  font-family: 'avenir', sans-serif;
+  font-family: 'avenir', 'nunito sans', sans-serif;
   letter-spacing: 1px;
   font-size: 1em;
   max-width: 90%;
@@ -107,7 +107,7 @@ html,body {
   max-width: 500px;
 }
 .info p {
-  font-family: 'avenir', sans-serif;
+  font-family: 'avenir', 'nunito sans', sans-serif;
   letter-spacing: 1px;
   font-size: 1em;
 
@@ -123,7 +123,7 @@ html,body {
 
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'avenir', 'nunito sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
