@@ -26,7 +26,7 @@ export default {
       colorOne: '#393939',
       colorTwo: '#fff',
       colorTwo: '#fff',
-      accentOne: '#569664'
+      accentOne: '#46ce90'
     }
   },
   watch: {
@@ -46,7 +46,7 @@ export default {
         this.contrastBackground = '#393939'
         this.colorOne = '#393939'
         this.colorTwo = '#fff'
-        this.accentOne = '#569664'
+        this.accentOne = '#46ce90'
       }
     }
   },

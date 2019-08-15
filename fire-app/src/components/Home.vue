@@ -74,15 +74,19 @@
 
       <section class="section stripe-section">
           <div class="section__info">
-             <h2 :style="{color: $parent.colorTwo}">Stripe Integration</h2>
-             <p :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+             <h2>Stripe Integration</h2>
+             <p>I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
           </div>
           <div class="slantRight" :style="{borderBottom: ' 100px solid' + $parent.backgroundTwo }"></div>
       </section>
 
       <section class="section profile-section " :style="{backgroundColor: $parent.backgroundTwo}">
+
+        <div class="model">
+          <img src="/static/profile-mockup.png">
+        </div>
         <div class="section__info">
-          <h2 :style="{color: $parent.colorOne}">Stripe Integration</h2>
+          <h2 :style="{color: $parent.colorOne}">Create a profile.</h2>
           <p :style="{color: $parent.colorOne}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
         </div>
         <div class="slantRight" :style="{borderBottom: ' 140px solid #fff' }"></div>
@@ -165,6 +169,7 @@ export default {
 
 <style lang="scss" scoped>
 
+$break-small: 750px;
 
 
 * {
@@ -175,7 +180,7 @@ export default {
 /* svg styles */
 
   .page-heading {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -218,7 +223,7 @@ export default {
 
 
 
-  .st0{fill:none;stroke:#00DCDD;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+  .st0{fill:none;stroke:#42e5d8;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 
   // .st0 {
   //     stroke-dasharray: 800;
@@ -242,6 +247,7 @@ export default {
     font-family: 'avenir', sans-serif;
     font-weight: bold;
     font-size: 4vw;
+    color: #393939;
   }
 
 
@@ -275,7 +281,7 @@ export default {
     border-right: 100vw solid transparent;
     height: 0;
     width: 0;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     z-index: 2;
 }
@@ -286,7 +292,7 @@ export default {
     border-left: 100vw solid transparent;
     height: 0;
     width: 0;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     z-index: 2;
 }
@@ -336,7 +342,7 @@ export default {
   font-size: 2em;
   padding: 10px 0 2px 0;
   width: 50%;
-  margin: 0 auto 2em 100px;
+  margin: 0 auto 20px 100px;
   z-index: 1;
   text-align: left;
   position: relative;
@@ -347,6 +353,7 @@ export default {
   padding: 1em 2em;
   width: auto;
   margin-left: 100px;
+  margin-top: 1em;
   background-color: #569664;
   border: 2px solid #569664;
   float: left;
@@ -374,17 +381,25 @@ export default {
   }
 }
 .stripe-section {
-  background-color: #6150d0;
+  background-color: #46ce90;
+  color: #fff !important;
 }
 .section {
-  height: 500px;
+  height: 600px;
   display: flex;
   flex-direction: row;
   position: relative;
+
   .model {
-    width: 40%;
-    height: 500px;
+    width: 50%;
+    height: 600px;
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 90%;
+    }
   }
   &__info {
     width: 50%;
@@ -405,17 +420,43 @@ export default {
       text-align: left;
     }
   }
-}
+  @media screen and (max-width: $break-small) {
+
+
+      flex-direction: column;
+      height: auto;
+      .model {
+      width: 100%;
+      height: 500px;
+      }
+      &__info {
+        width: 100%;
+        padding: 6em 0;
+        h2 {
+        width: 80%;
+        font-size: 8vw;
+        margin: 0 auto 5px auto;
+        text-align: left;
+      }
+      p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+      }
+      }
+    }
+
+  }
 
 
 @media only screen and (max-width: 900px) {
 
   .slider {
-    height: 400px;
+    height: 500px;
   }
 
   .slide {
-    height: 400px;
+    height: 500px;
     background-size: cover;
     background-position: center;
   }
@@ -426,9 +467,9 @@ export default {
     }
 
   .page-heading h1 {
-    font-size: 2.4em;
+    font-size: 2.8em;
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: -1.5em auto 0 auto;
     text-align: left;
     font-weight: 900;
   }
@@ -443,9 +484,8 @@ export default {
     font-size: 2em;
     padding: 0;
     width: 90%;
-    margin: 0 auto 2em auto;
+    margin: 0 auto 15px auto;
     text-align: left;
-
   }
   .slide button {
     font-size: .9em;
