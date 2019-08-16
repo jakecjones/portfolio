@@ -23,6 +23,10 @@
           <router-link active-class="active" to="/tools"><li :style="{ color: $parent.colorTwo}">Tools</li></router-link>
           <router-link active-class="active" to="/contact"><li :style="{ color: $parent.colorTwo}">Contact</li></router-link>
         </ul>
+<!-- 
+                    <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="name" placeholder="name">
+            <input :style="{backgroundColor: $parent.backgroundTwo}" type="email" v-model="email" placeholder="email">
+            <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="message" placeholder="message"> -->
 
   </section>
 

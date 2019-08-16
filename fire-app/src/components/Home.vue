@@ -9,8 +9,8 @@
             <div class="page-heading">
             <h1 :style="{color: $parent.colorOne}">Jake Jones</h1>
             <p :style="{color: $parent.colorOne}">Web Developer <br>
-            & Designer
-            <!-- <vue-typer class="slider__typer" :text="typer" erase-style='backspace' pre-type-delay='100'></vue-typer> -->
+            <span :style="{color: $parent.colorOne}"> & </span>
+            <vue-typer  :style="{color: $parent.colorOne}" class="typer" :text="typer" erase-style='backspace' erase-delay='70' pre-type-delay='100' caret-animation='smooth'></vue-typer>
             </p>
             <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Contact</button></router-link>
           </div>
@@ -195,6 +195,22 @@ export default {
 <style lang="scss" >
 
 $break-small: 800px;
+
+  .vue-typer {
+  /* Styles for the vue-typer container
+     e.g. font-family, font-size  */
+ 
+  .custom.char {
+    /* Styles for each character
+       e.g. color, background-color */
+ 
+    &.typed {
+      position: relative;
+      z-index: 1;
+      color: unset;
+    }
+  }
+  }
 
 
   .svg-container {
@@ -405,6 +421,7 @@ $break-small: 800px;
   transition: all .35s ease-in-out;
 }
 
+
 // .slider::after {
 //     position: absolute;
 //     content: "";
@@ -489,7 +506,6 @@ $break-small: 800px;
   z-index: 1;
   text-align: left;
   position: relative;
-  color: #393939;
   font-style: italic;
 
 }

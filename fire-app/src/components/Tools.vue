@@ -1,7 +1,7 @@
 <template>
   <section class="display">
 
-    <div class="slider" :style="{backgroundColor: $parent.backgroundOne}" >
+    <!-- <div class="slider" :style="{backgroundColor: $parent.backgroundOne}" >
       <div class="slantLeft" :style="{borderBottom: ' 50px solid ' + $parent.contrastBackground}"></div>
 
           <div class="slide">
@@ -30,44 +30,77 @@
 
             </div>
           </div>
-    </div>
+    </div> -->
 
-    <section class="sub-section-heading" :style="{backgroundColor: $parent.contrastBackground}">
+    <section class="sub-section-heading" :style="{backgroundColor: '#46ce90'}">
 
       <img class="decor-left" src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
       <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
       <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
 
       <div class="page-heading">
-        <h2 :style="{color: $parent.colorTwo}">Proud Papa.</h2>
-        <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+        <h2>Resume</h2>
+        <p class="description">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
 
       </div>
+      <div class="slantRight" :style="{borderBottom: ' 50px solid ' + $parent.backgroundTwo}"></div>
+
     </section>
 
-    <section class="resume section" :style="{backgroundColor: $parent.backgroundOne}">
+    <section class="resume section" :style="{backgroundColor: $parent.backgroundTwo, color: $parent.colorOne}">
                 <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
                 <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
                 <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
       <div class="group">
         <h3>Experience</h3>
         <h4>Roxy Art Market</h4>
-        <p>- hello goodbye</p>
-        <p>- hello goodbye</p>
+        <p>UX/UI</p>
+        <p>3D model automation</p>
+        <p>Front-end development</p>
+        <p>Back-end development</p>
+        <p>Database architecture</p>
+        <p>API integration</p>
+
         <h4>Bahlr Media</h4>
-        <p>- Developed websites</p>
-        <p>- Craft CMS</p>
-        <p>- Shopify</p>
+        <p>Front-end Development</p>
+        <p>Craft CMS Development</p>
+        <p>Shopify Development</p>
+
+        <h4>Bixell Design Studio</h4>
+        <p>Front-end Development</p>
+        <p>Logo Design</p>
+        <p>Branding</p>
       </div>
       <div class="group">
         <h3>Education</h3>
         <h4>North Idaho College</h4>
         <p>Associates of Science</p>
         <p>Associates of Arts</p>
+
+        <h3>Tools</h3>
+        <p>HTML5</p>
+        <p>CSS3</p>
+        <p>Javascript</p>
+        <p>Node.js</p>
+        <p>Vue.js</p>
+        <p>Webpack</p>
+        <p>Three.js</p>
+        <p>SCSS</p>
+        <p>NPM</p>
+        <p>Firebase</p>
+        <p>Webhooks</p>
+        <p>GIT</p>
+        <p>Craft CMS</p>
+        <p>Shopify</p>
+        <p>PHP</p>
+        <p>WebGL</p>
+        <p>SVG Animation</p>
       </div>
+
       <div class="group">
-        <h3>Skills</h3>
+        
       </div>
+
 
     </section>
 
@@ -220,7 +253,7 @@ $break-small: 800px;
         animation: lamp 2s ease-in alternate infinite;
       }
       .decor-left {
-        width: 150px;
+        width: 200px;
         position: absolute;
         left: 0;
         top: 0;
@@ -239,10 +272,10 @@ $break-small: 800px;
           }
 
           .decor-glow {
-            width: 100px;
+            width: 180px;
             position: absolute;
             right: 30px;
-            top: -50px;
+            top: 0;
             opacity: 1;
             animation: lamp 2s ease-in alternate infinite;
             z-index: 20;
@@ -257,10 +290,10 @@ $break-small: 800px;
             animation: lamp 2s ease-in alternate infinite;
           }
           .decor-left {
-            width: 110px;
+            width: 150px;
             position: absolute;
-            right: 0;
-            top: 0;
+            right: 20px;
+            top: 20px;
             opacity: 1;
             animation: lamp 2s ease-in alternate infinite;
           }
@@ -290,31 +323,53 @@ $break-small: 800px;
   flex-direction: row;
   flex-flow: wrap;
   position: relative;
+  padding: 20vh 0;
+
   .group {
-    width: 50%;
+    width: 40%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20vh 0;
+    padding: 5vh 0;
+
+
+
     // justify-content: center;
 
     h3, h4, p {
       font-size: 3vw;
-      margin: 0;
-      width: 50%;
+      margin: 0 auto;
+      width: 90%;
       text-align: left; 
     }
     h3 {
       margin-bottom: 2vh;
-      
+      margin-top: 4vh;
+      padding-bottom: 2vh;
+      border-bottom: 2px solid #aaa;
     }
     h4 {
       font-size: 2vw;
       margin-bottom: 2vh;
-      margin-top: 2vh;
+      margin-top: 4vh;
     }
     p {
       font-size: 16px;
+      // text-transform: lowercase;
+    }
+
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+      h3 {
+        font-size: 6vw;
+      }
+      h4 {
+        font-size: 4vw;
+      }
+      p {
+        font-size: 4vw;
+      }
     }
   }
 
@@ -516,6 +571,7 @@ $break-small: 800px;
 
 .sub-section-heading {
   background-color: #393939;
+  color: #fff !important;
   height: 400px;
   margin: 0;
   padding: 2em 0;
@@ -526,6 +582,10 @@ $break-small: 800px;
     margin: 0 auto;
     width: 70%;
     max-width: 1000px;
+    color: #fff !important;
+  }
+  p {
+    color: #fff !important;
   }
 
 }
@@ -534,7 +594,6 @@ $break-small: 800px;
   color: #fff !important;
 }
 .section {
-  height: 600px;
   display: flex;
   flex-direction: row;
   position: relative;

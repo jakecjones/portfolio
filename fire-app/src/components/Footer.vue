@@ -5,7 +5,7 @@
         <!-- <h3>Jake Jones</h3> -->
         <ul>
           <router-link to="/"><li>Work</li></router-link>
-          <router-link to="/tools"><li>Tools</li></router-link>
+          <router-link to="/tools"><li>Resume</li></router-link>
           <router-link to="/contact"><li>Contact</li></router-link>
         </ul>
       </div>
@@ -91,7 +91,8 @@ footer {
 }
 
 .footer-group {
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: 300;
   width: 85%;
   height: 100%;
   margin: 1em 2em 1.5em 4em;
@@ -118,6 +119,7 @@ footer {
   margin: 0;
   font-size: 2em;
   text-align: left;
+  font-weight: 200;
 
 
   /* list-style: circle; */
