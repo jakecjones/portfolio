@@ -19,9 +19,9 @@
       <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
 
         <ul>
-          <router-link to="/"><li :style="{ color: $parent.colorTwo}">Work</li></router-link>
-          <router-link to="/tools"><li :style="{ color: $parent.colorTwo}">Tools</li></router-link>
-          <router-link to="/contact"><li :style="{ color: $parent.colorTwo}">Contact</li></router-link>
+          <router-link active-class="active" to="/"><li :style="{ color: $parent.colorTwo}">Work</li></router-link>
+          <router-link active-class="active" to="/tools"><li :style="{ color: $parent.colorTwo}">Tools</li></router-link>
+          <router-link active-class="active" to="/contact"><li :style="{ color: $parent.colorTwo}">Contact</li></router-link>
         </ul>
 
   </section>
@@ -84,6 +84,21 @@ export default {
 }
 </script>
 
+<style>
+/* .active {
+  position: relative;
+}
+.active::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  left: -50px;
+  bottom: 15px;
+  height: 2px;
+  background-color: #fff;
+} */
+</style>
+
 <style lang="scss" scoped>
 
 .dark-mode {
@@ -119,6 +134,8 @@ export default {
       background-color: #fff;
     }
 }
+
+
 
 
 .nav-button {
@@ -317,7 +334,7 @@ a {
   transition: .3s ease-in-out;
   margin: 65px auto 0 auto;
   padding: 50px 0;
-  height: 100%;
+  height: calc(100% - 65px);
   width: 0;
   right: 0;
   overflow: hidden;
@@ -335,7 +352,7 @@ a {
   }
 
   ul {
-    margin-top: -20vh;
+    margin-top: -10vh;
     position: absolute;
     left: 50px;
   }
@@ -344,7 +361,10 @@ a {
     display: block;
     color: #fff;
     text-align: left;
-    font-size: 3em;
+    font-size: 2.5em;
+    font-weight: 100;
+    margin-bottom: 2vh;
+    font-style: italic;
   }
 
   // background-color: #000;

@@ -28,11 +28,6 @@
                 <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
                 <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
 
-                  <!-- <div @click="$parent.darkMode = !$parent.darkMode" class="dark-mode" :style="{backgroundColor: $parent.colorOne}">
-                    <div :style="{ backgroundColor: $parent.colorTwo}" class="line"></div>
-                    <div :style="{ left: $parent.onSwitch + 'px', borderColor: $parent.colorTwo, backgroundColor: $parent.colorOne}" class="circle"></div>
-                  </div> -->
-
             </div>
           </div>
     </div>
@@ -50,35 +45,29 @@
       </div>
     </section>
 
-
-    <section class="tools-grid">
-
-      <div :style="{backgroundColor: $parent.backgroundOne}" class="tool">
-        <img src="/static/vue-logo.png" alt="firebase logo jake jones web developer">
+    <section class="resume section" :style="{backgroundColor: $parent.backgroundOne}">
+                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
+                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
+                <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
+      <div class="group">
+        <h3>Experience</h3>
+        <h4>Roxy Art Market</h4>
+        <p>- hello goodbye</p>
+        <p>- hello goodbye</p>
+        <h4>Bahlr Media</h4>
+        <p>- Developed websites</p>
+        <p>- Craft CMS</p>
+        <p>- Shopify</p>
       </div>
-      <div :style="{backgroundColor: $parent.backgroundTwo}" class="tool">
-        <img src="/static/firebase-logo.png" alt="firebase logo jake jones web developer">
+      <div class="group">
+        <h3>Education</h3>
+        <h4>North Idaho College</h4>
+        <p>Associates of Science</p>
+        <p>Associates of Arts</p>
       </div>
-      <div :style="{backgroundColor: $parent.backgroundTwo}" class="tool">
-        <img src="/static/stripe-logo.png" alt="firebase logo jake jones web developer">
+      <div class="group">
+        <h3>Skills</h3>
       </div>
-      <div :style="{backgroundColor: $parent.backgroundOne}" class="tool">
-        <img src="/static/node-logo.png" alt="firebase logo jake jones web developer">
-      </div>
-
-      <div :style="{backgroundColor: $parent.backgroundOne}" class="tool">
-        <img src="/static/webgl-logo.png" alt="firebase logo jake jones web developer">
-      </div>
-      <div :style="{backgroundColor: $parent.backgroundTwo}" class="tool">
-        <img src="/static/firebase-logo.png" alt="firebase logo jake jones web developer">
-      </div>
-      <div :style="{backgroundColor: $parent.backgroundTwo}" class="tool">
-        <img src="/static/firebase-logo.png" alt="firebase logo jake jones web developer">
-      </div>
-      <div :style="{backgroundColor: $parent.backgroundOne}" class="tool">
-        <img src="/static/firebase-logo.png" alt="firebase logo jake jones web developer">
-      </div>
-
 
     </section>
 
@@ -294,22 +283,41 @@ $break-small: 800px;
 }
 
 
-.tools-grid {
+.resume {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
-  .tool {
-    height: 50vw;
-    width: 50vw;
+  position: relative;
+  .group {
+    width: 50%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    img {
-      width: 40%;
+    padding: 20vh 0;
+    // justify-content: center;
+
+    h3, h4, p {
+      font-size: 3vw;
+      margin: 0;
+      width: 50%;
+      text-align: left; 
+    }
+    h3 {
+      margin-bottom: 2vh;
+      
+    }
+    h4 {
+      font-size: 2vw;
+      margin-bottom: 2vh;
+      margin-top: 2vh;
+    }
+    p {
+      font-size: 16px;
     }
   }
+
 }
 /* svg styles */
 
@@ -510,6 +518,7 @@ $break-small: 800px;
   background-color: #393939;
   height: 400px;
   margin: 0;
+  padding: 2em 0;
   display: flex;
   justify-content: center;  
   position: relative;

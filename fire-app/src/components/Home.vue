@@ -107,6 +107,7 @@
         <div class="model">
           <img src="/static/profile-mockup.png">
         </div>
+
         <div class="section__info">
 
                 <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
@@ -515,6 +516,8 @@ $break-small: 800px;
   background-color: #393939;
   height: 400px;
   margin: 0;
+  padding: 2em 0;
+
   display: flex;
   justify-content: center;  
   position: relative;

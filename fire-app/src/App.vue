@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-        <!-- <transition name="fade" mode="out-in"> -->
+        <transition name="fade" mode="out-in">
 
     <router-view/>
-        <!-- </transition> -->
+        </transition>
 
     <Header :key="$route.fullPath"/>
   </div>
@@ -137,9 +137,9 @@ html,body {
   text-align: center;
 }
 
-/* .fade-enter-active,
+.fade-enter-active,
 .fade-leave-active {
-  transition-duration: 0.35s;
+  transition-duration: 0.3s;
   transition-property: all;
   transition-timing-function: ease-in-out;
 }
@@ -147,7 +147,7 @@ html,body {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
-} */
+}
 
 @keyframes animate {
   0% {
