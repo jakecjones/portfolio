@@ -13,8 +13,16 @@
     <div :style="{ backgroundColor: $parent.colorOne}" class="line"></div>
   </div>
 
-  <section :class="{navigation: activeNav}" class="container page">
+  <section :class="{navigation: activeNav}" class="container page" :style="{backgroundColor: $parent.contrastBackground}">
+      <img src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
+      <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
+      <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
 
+        <ul>
+          <router-link to="/"><li :style="{ color: $parent.colorTwo}">Work</li></router-link>
+          <router-link to="/tools"><li :style="{ color: $parent.colorTwo}">Tools</li></router-link>
+          <router-link to="/contact"><li :style="{ color: $parent.colorTwo}">Contact</li></router-link>
+        </ul>
 
   </section>
 
@@ -292,7 +300,7 @@ li {
 }
 
 .navigation {
-  width: 100% !important;
+  width: 300px !important;
 }
 
 a {
@@ -307,14 +315,39 @@ a {
 
 .container {
   transition: .3s ease-in-out;
-  margin: 0 auto 0 auto;
+  margin: 65px auto 0 auto;
   padding: 50px 0;
   height: 100%;
   width: 0;
   right: 0;
   overflow: hidden;
   position: fixed;
-  background-color: #000;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+  }
+
+  ul {
+    margin-top: -20vh;
+    position: absolute;
+    left: 50px;
+  }
+
+  li {
+    display: block;
+    color: #fff;
+    text-align: left;
+    font-size: 3em;
+  }
+
+  // background-color: #000;
 }
 .container form {
   border-right: 2px solid white;

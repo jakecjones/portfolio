@@ -7,42 +7,31 @@
           <div class="slide">
             
             <div class="page-heading">
-            <h1 :style="{color: $parent.colorOne}">Tools</h1>
-            <!-- <p :style="{color: $parent.colorOne}">Popular tools I have used in production envirments. -->
-            <!-- <vue-typer class="slider__typer" :text="typer" erase-style='backspace' pre-type-delay='100'></vue-typer> -->
-            <!-- </p> -->
+            <h1 :style="{color: $parent.colorOne}">Resume</h1>
+            <p :style="{color: $parent.colorOne}">Web Developer <br>
+            & Designer
+            </p>
+
             <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Contact</button></router-link>
           </div>
             <div class="svg-container">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 836 1525" style="enable-background:new 0 0 836 1525;" xml:space="preserve">
 
-                <svg version="1.1" x="0px" y="0px"
-                  viewBox="0 0 500 798" style="enable-background:new 0 0 500 798;" xml:space="preserve">
-                  <g>
-                    <polyline class="st0" points="342.2,195.6 444.1,317.5 383,317.5 	"/>
-                    <polyline class="st0" points="57,798 56.9,297.5 341.4,13 341.4,195.6 219.5,317.5 289,317.5 	"/>
-                    <path class="st0" d="M383,317.5c-0.2,25.7-21.2,46.5-47,46.5s-46.7-20.8-47-46.5H383z"/>
-                    <g>
-                      <line class="st0" x1="342" y1="419" x2="342" y2="478"/>
-                      <line class="st0" x1="342" y1="487" x2="342" y2="511"/>
-                      <line class="st0" x1="342" y1="395" x2="342" y2="409"/>
-                    </g>
-                    <g>
-                      <line class="st0" x1="378.9" y1="388.3" x2="408.3" y2="439.5"/>
-                      <line class="st0" x1="412.7" y1="447.3" x2="424.7" y2="468.1"/>
-                    </g>
-                    <g>
-                      <line class="st0" x1="282.2" y1="412.6" x2="257.9" y2="466.3"/>
-                      <line class="st0" x1="292.1" y1="390.7" x2="286.3" y2="403.4"/>
-                    </g>
-                  </g>
+                <circle class="st0" cx="283" cy="292" r="64"/>
+                <circle class="st0" cx="174" cy="958" r="32"/>
+                <polygon class="st0" points="253.9,613.8 337.4,925.6 565.6,697.4 "/>
+                <polygon class="st0" points="583.6,456 538.2,534.8 629.1,534.8 "/>
+                <polyline class="st0" points="402.6,1354 511.9,1244.7 451.6,1184.4 661,975 "/>
                 </svg>
-                <img class="lamp-glow" src="/static/lamp-glow.png" alt="jake jones lamp logo">
-                <img class="lamp-glow" src="/static/lamp-glow.png" alt="jake jones lamp logo">
+                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
+                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
+                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
 
-                  <div @click="$parent.darkMode = !$parent.darkMode" class="dark-mode" :style="{backgroundColor: $parent.colorOne}">
+                  <!-- <div @click="$parent.darkMode = !$parent.darkMode" class="dark-mode" :style="{backgroundColor: $parent.colorOne}">
                     <div :style="{ backgroundColor: $parent.colorTwo}" class="line"></div>
                     <div :style="{ left: $parent.onSwitch + 'px', borderColor: $parent.colorTwo, backgroundColor: $parent.colorOne}" class="circle"></div>
-                  </div>
+                  </div> -->
 
             </div>
           </div>
@@ -169,7 +158,7 @@ export default {
 </script>
 
 
-<style lang="scss" >
+<style lang="scss" scoped>
 
 $break-small: 800px;
 
@@ -201,6 +190,18 @@ $break-small: 800px;
     opacity: 1;
   }
 }
+  // .st0 {
+  //     stroke-dasharray: 800;
+  //     stroke-dashoffset: 1400;
+  //     animation: dash 2s linear forwards;
+  // }
+  //   @keyframes dash {
+  //   to {
+  //     stroke-dasharray: 0;
+  //     stroke-dashoffset: 0;
+
+  //   }
+  // }
 
 
       .lamp-glow {
@@ -278,7 +279,7 @@ $break-small: 800px;
 
 
 
-  .st0{fill:none;stroke:#42e5d8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+  .st0{fill:none;stroke:#42e5d8;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 
 
 </style>
@@ -455,7 +456,7 @@ $break-small: 800px;
 
 .page-heading h2 {
   padding: 0;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   text-align: left;
   position: relative;
@@ -465,7 +466,7 @@ $break-small: 800px;
 .page-heading p.description {
   font-size: 16px;
   padding: 0;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   z-index: 1;
   text-align: left;
@@ -514,7 +515,7 @@ $break-small: 800px;
   position: relative;
   h2 {
     margin: 0 auto;
-    width: 90%;
+    width: 70%;
     max-width: 1000px;
   }
 

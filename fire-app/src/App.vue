@@ -1,7 +1,11 @@
 <template>
   <div id="app">
+        <!-- <transition name="fade" mode="out-in"> -->
+
     <router-view/>
-    <Header/>
+        <!-- </transition> -->
+
+    <Header :key="$route.fullPath"/>
   </div>
 </template>
 <script>
@@ -133,17 +137,17 @@ html,body {
   text-align: center;
 }
 
-.fade-enter-active,
+/* .fade-enter-active,
 .fade-leave-active {
-  transition-duration: 0.1s;
-  transition-property: opacity;
+  transition-duration: 0.35s;
+  transition-property: all;
   transition-timing-function: ease-in-out;
 }
 
 .fade-enter,
 .fade-leave-active {
-  opacity: 0
-}
+  opacity: 0;
+} */
 
 @keyframes animate {
   0% {

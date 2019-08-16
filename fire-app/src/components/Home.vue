@@ -471,7 +471,7 @@ $break-small: 800px;
 .page-heading p.description {
   font-size: 16px;
   padding: 0;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   z-index: 1;
   text-align: left;
@@ -520,7 +520,7 @@ $break-small: 800px;
   position: relative;
   h2 {
     margin: 0 auto;
-    width: 90%;
+    width: 70%;
     max-width: 1000px;
   }
 
