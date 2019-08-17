@@ -574,7 +574,7 @@ $break-small: 800px;
   color: #fff !important;
   height: 400px;
   margin: 0;
-  padding: 2em 0;
+  padding: 4em 0 2em 0;
   display: flex;
   justify-content: center;  
   position: relative;

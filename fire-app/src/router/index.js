@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import Tools from '@/components/Tools'
+import Resume from '@/components/Resume'
 import Contact from '@/components/Contact'
 import PageNotFound from '@/components/PageNotFound'
 
@@ -20,9 +20,9 @@ let router = new Router({
       component: Home
     },
     {
-      path: '/tools',
-      name: 'tools',
-      component: Tools
+      path: '/resume',
+      name: 'Resume',
+      component: Resume
     },
     {
       path: '/contact',

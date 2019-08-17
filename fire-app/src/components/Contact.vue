@@ -1,24 +1,51 @@
 <template>
   <section class="display">
 
-    <div class="slider" :style="{backgroundColor: $parent.backgroundOne}" >
-      <div class="slantLeft" :style="{borderBottom: ' 50px solid ' + $parent.contrastBackground}"></div>
+    <div class="slider" >
 
           <div class="slide">
             
             <div class="page-heading">
-            <h1 :style="{color: $parent.colorOne}">Contact</h1>
-            <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="name" placeholder="Name">
-            <input :style="{backgroundColor: $parent.backgroundTwo}" type="email" v-model="email" placeholder="Email">
-            <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="message" placeholder="Message">
+            <h1 >Contact</h1>
+            <p class="description">
+              <a href="mailto:jakejonesinfo@gmail.com">jakejonesinfo@gmail.com</a><br>
+              <a href="tel:1-208-699-7404">(208) 699-7404</a>
+            </p>
+            
+            <label>
+            
+            <template  v-if="activeSlide == 1">
+              <input @keydown.enter="nextSlide()" type="text" v-model="name" placeholder="Name">
+              <span class="step">1/3</span>
+            </template>
+
+            <template v-if="activeSlide == 2">
+              <input @keydown.enter="nextSlide()" type="text" v-model="email" placeholder="Email">
+              <span  class="step">2/3</span>
+            </template>
+
+            <template v-if="activeSlide == 3">
+              <input @keydown.enter="nextSlide()" type="text" v-model="message" placeholder="Message">
+              <span class="step">3/3</span>
+            </template>
+          </label>
+
+            <!-- <input :style="{backgroundColor: $parent.backgroundTwo}" type="email" v-model="email" placeholder="Email">
+            <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="message" placeholder="Message"> -->
+
+            
             <!-- <p :style="{color: $parent.colorOne}">Web Developer <br>
             & Designer
             </p> -->
-
-            <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Send message</button></router-link>
+            <div class="buttons-container">
+              <button v-if="activeSlide == 2 || activeSlide == 3" @click="backSlide()" class="next" :style="{color: $parent.accentOne, borderColor: $parent.accentOne}">back</button>
+              <button v-if="activeSlide != 3" @click="nextSlide()" class="next" :style="{color: $parent.accentOne, borderColor: $parent.accentOne}">next</button>
+              <button v-if="activeSlide == 3" @click="send()" class="next" :style="{color: $parent.accentOne, borderColor: $parent.accentOne}">submit</button>
+            </div>
+            
           </div>
             <div class="svg-container">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 836 1525" style="enable-background:new 0 0 836 1525;" xml:space="preserve">
 
                 <circle class="st0" cx="283" cy="292" r="64"/>
@@ -26,59 +53,14 @@
                 <polygon class="st0" points="253.9,613.8 337.4,925.6 565.6,697.4 "/>
                 <polygon class="st0" points="583.6,456 538.2,534.8 629.1,534.8 "/>
                 <polyline class="st0" points="402.6,1354 511.9,1244.7 451.6,1184.4 661,975 "/>
-                </svg>
-                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
-                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
-                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
+                </svg> -->
+                <img class="lamp-glow" src="/static/nav-glow-01.svg" alt="jake jones lamp logo">
+                <img class="lamp-glow" src="/static/nav-glow-01.png" alt="jake jones lamp logo">
+                <img class="lamp-glow" src="/static/nav-glow-01.png" alt="jake jones lamp logo">
 
             </div>
           </div>
     </div>
-
-    <section class="sub-section-heading" :style="{backgroundColor: $parent.contrastBackground}">
-
-      <img class="decor-left" src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
-      <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
-      <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
-
-      <div class="page-heading">
-        <h2 :style="{color: $parent.colorTwo}">Proud Papa.</h2>
-        <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
-
-      </div>
-    </section>
-
-    <section class="resume section" :style="{backgroundColor: $parent.backgroundOne}">
-                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
-                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
-                <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
-      <div class="group">
-        <h3>Experience</h3>
-        <h4>Roxy Art Market</h4>
-        <p>- UX/UI</p>
-        <p>- Front-end Development</p>
-        <p>- Back-end Development</p>
-        <p>- Database Management</p>
-        <p>- API Integration</p>
-
-        <h4>Bahlr Media</h4>
-        <p>- Developed websites</p>
-        <p>- Craft CMS</p>
-        <p>- Shopify</p>
-      </div>
-      <div class="group">
-        <h3>Education</h3>
-        <h4>North Idaho College</h4>
-        <p>Associates of Science</p>
-        <p>Associates of Arts</p>
-      </div>
-      <div class="group">
-        <h3>Skills</h3>
-      </div>
-
-    </section>
-
-    
 
     <Footer/> 
 
@@ -109,6 +91,7 @@ export default {
       alt: null,
       image: '',
       slideId: '',
+      activeSlide: 1,
       heroSection: [],
       typer: [
           "Designer.",
@@ -149,7 +132,37 @@ export default {
     return {
       heroSection: firestore.collection('heroSection')
       }
+    },
+    methods: {
+      nextSlide() {
+        if (this.activeSlide == 3) {
+          this.activeSlide = 1
+          return
+        }
+        this.activeSlide = this.activeSlide + 1
+    },
+      backSlide() {
+        if (this.activeSlide == 1) {
+          this.activeSlide = 3
+          return
+        }
+        this.activeSlide = this.activeSlide - 1
+    },
+    send() {
+        const createdAt = new Date()
+        firestore
+          .collection("jakejonesinfo")
+          .add({
+            timestamp: createdAt,
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          })
+          .then((data) => {
+            alert('thanks ' + this.name + '!  Jake should be back with you shortly.')
+          })
     }
+}
 }
 </script>
 
@@ -158,11 +171,33 @@ export default {
 
 $break-small: 800px;
 
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-left: 100px;
+    @media screen and (max-width: $break-small) {
+      margin-left: 35px;
+      button {
+        margin-left: 0;
+        font-size: 10px !important;
+      }
+    }
+}
+.contact-slide {
+  position: absolute;
+  left: 100%;
+}
+.active-slide {
+  position: relative;
+  left: 0;
+
+}
 
   .svg-container {
-    width: 40%;
+    width: 65%;
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     right: 2vw;
       @media screen and (max-width: $break-small) {
         width: 45%;
@@ -201,7 +236,7 @@ $break-small: 800px;
 
 
       .lamp-glow {
-        width: 80%;
+        width: 60%;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -237,7 +272,7 @@ $break-small: 800px;
 
         @media screen and (max-width: $break-small) {
           .lamp-glow {
-            width: 80%;
+            width: 100%;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -393,6 +428,7 @@ $break-small: 800px;
     font-family: 'avenir', 'nunito sans', sans-serif;
     font-weight: bold;
     font-size: 7vw;
+    color: #fff;
   }
   .page-heading h2 {
     font-family: 'avenir', 'nunito sans', sans-serif;
@@ -405,28 +441,57 @@ $break-small: 800px;
 
 
 .slider {
-  background-color: #eee;
+  background-color: #303030;
   height: 700px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 15%;
   position: relative;
   transition: all .35s ease-in-out;
+  .next {
+    width: auto;
+  }
+  label {
+     width: 400px;
+     margin: 0 0 2vh 0;
+     margin-left: 100px;
+     position: relative;
+     .step {
+      width: 50px;
+      font-size: 14px;
+      position: absolute;
+      letter-spacing: 2px;
+      right: -60px;
+      top: -10px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 100%; 
+      color: #fff;
+      font-weight: 100;
+    }
+    input {
+      border: none;
+      outline: none;
+      margin: 0;
+      border-radius: 0;
+      font-size: 3vw;
+      padding: 1em 0 10px 0;
+      color: #fff;
+      width: inherit;
+      background-color: transparent !important;
+      border-bottom: 1px solid #fff;
 
-  input {
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    width: 400px;
-    font-size: 18px;
-    padding: 1em;
-    margin: 0 0 2vh 100px;;
-    left: 2em;
-    color: #aaa
+    }
+    input::placeholder {
+      color: #fff
+    }
   }
-  input::placeholder {
-    color: #aaa
-  }
+   @media screen and (max-width: $break-small) {
+     label {
+       width: 280px;
+     }
+   }
 
 }
 
@@ -477,7 +542,7 @@ $break-small: 800px;
 }
 
 .page-heading h1 {
-  padding: 0 0 0 0;
+  padding: 0;
   width: auto;
   margin: 0 0 20px 100px;
   text-align: left;
@@ -498,7 +563,7 @@ $break-small: 800px;
   font-size: 16px;
   padding: 0;
   width: 70%;
-  margin: 0 auto;
+  margin: 0 auto 0 100px;
   z-index: 1;
   text-align: left;
   position: relative;
@@ -520,21 +585,29 @@ $break-small: 800px;
 }
 .slide button {
   font-size: 1.1em;
-  padding: 1em 2em;
+  padding: 7px 30px;
   width: auto;
-  margin-left: 100px;
   margin-top: 1em;
-  background-color: #569664;
-  border: 2px solid #569664;
+  margin-right: 10px;
+  border: 1px solid #46ce90;
+  background-color: transparent;
   float: left;
   color: #fff;
   font-weight: 700;
   font-family: 'avenir', 'nunito sans', sans-serif;
   position: relative;
   z-index: 1;
-  border-radius: 10px;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #46ce90;
+    color: #fff !important;
+    cursor: pointer;
+  }
   // box-shadow: 3px 3px 15px #666;
 }
+
 
 .sub-section-heading {
   background-color: #393939;
@@ -669,45 +742,30 @@ $break-small: 800px;
     background-size: cover;
     background-position: center;
   }
-  .VueCarousel-pagination {
-      /* margin: 10px auto;
-      z-index: 99; */
-      display: none;
-    }
 
-  .page-heading h1 {
-    font-size: 2.8em;
-    width: 70%;
-    margin: -1.5em auto 0 auto;
-    text-align: left;
-    font-weight: 900;
-  }
-  .page-heading h2 {
-    font-size: 2.4em;
-    width: 70%;
-    margin: 0 auto;
-    text-align: left;
-    font-weight: 900;
-  }
-  .slide p {
-    font-size: 2em;
+.page-heading  {
+  h1 {
     padding: 0;
-    width: 70%;
-    margin: 0 auto 15px auto;
-    text-align: left;
-  }
-  .slide button {
-    font-size: .9em;
-    padding: 1em 2em;
     width: auto;
-    margin-left: 15%;
-    background-color: #569664;
-    border: 2px solid #569664;
-    float: left;
-    color: #fff;
-    font-family: 'avenir', 'nunito sans', sans-serif;
-    letter-spacing: 0.3em;
+    margin: -100px 0 20px 30px;
+    font-size: 10vw;
+    text-align: left;
+    position: relative;
+    z-index: 1;
   }
+  p.description {
+    margin-left: 30px;
+  }
+  label {
+    margin-left: 30px;
+    input {
+    font-size: 6vw;
+    }
+  }
+
+}
+
+
 
 
 }

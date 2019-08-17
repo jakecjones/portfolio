@@ -19,9 +19,9 @@
       <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
 
         <ul>
-          <router-link active-class="active" to="/"><li :style="{ color: $parent.colorTwo}">Work</li></router-link>
-          <router-link active-class="active" to="/tools"><li :style="{ color: $parent.colorTwo}">Tools</li></router-link>
-          <router-link active-class="active" to="/contact"><li :style="{ color: $parent.colorTwo}">Contact</li></router-link>
+          <router-link active-class="active" to="/"><li :style="{ color: $parent.colorTwo}">work</li></router-link>
+          <router-link active-class="active" to="/resume"><li :style="{ color: $parent.colorTwo}">resume</li></router-link>
+          <router-link active-class="active" to="/contact"><li :style="{ color: $parent.colorTwo}">contact</li></router-link>
         </ul>
 <!-- 
                     <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="name" placeholder="name">
@@ -152,7 +152,6 @@ export default {
   padding: 0 5px 5px 5px;
   display: flex;
   flex-direction: column;
-
 }
 .nav-button .line {
   width: 90%;
@@ -365,10 +364,11 @@ a {
     display: block;
     color: #fff;
     text-align: left;
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 100;
     margin-bottom: 2vh;
-    font-style: italic;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid #aaa;
   }
 
   // background-color: #000;

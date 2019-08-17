@@ -4,9 +4,9 @@
       <div class="footer-group">
         <!-- <h3>Jake Jones</h3> -->
         <ul>
-          <router-link to="/"><li>Work</li></router-link>
-          <router-link to="/tools"><li>Resume</li></router-link>
-          <router-link to="/contact"><li>Contact</li></router-link>
+          <router-link to="/"><li>work</li></router-link>
+          <router-link to="/resume"><li>resume</li></router-link>
+          <router-link to="/contact"><li>contact</li></router-link>
         </ul>
       </div>
 
