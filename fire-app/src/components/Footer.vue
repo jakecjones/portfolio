@@ -1,7 +1,10 @@
 <template>
   <section>
     <footer> 
+    <div class="slantRight" :style="{borderBottom: ' 30px solid #46ce90'}"></div>
+
       <div class="footer-group">
+
         <!-- <h3>Jake Jones</h3> -->
         <ul>
           <router-link to="/"><li>work</li></router-link>
@@ -13,7 +16,7 @@
 
       <div class="footer-group-3">
         <a href="https://github.com/jakecjones" target="_blank"><img src="../assets/icons/github-01.png"></a>
-        <a href="https://www.instagram.com/jak3jon3s/" target="_blank"><img src="../assets/icons/insta-01.png"></a>
+        <a href="https://www.linkedin.com/in/jake-jones-47ba0914b/" target="_blank"><img src="/static/in-01.png"></a>
       </div>
       <div class="footer-group-2">
         <h3>© 2019 Jake Jones. All rights reserved.</h3>
@@ -76,6 +79,18 @@ footer {
   display: flex;
   flex-direction: row;
   z-index: 99999;
+  padding-bottom: 50px !important;
+}
+
+.slantRight {
+    position: absolute;
+    content: "";
+    border-left: 100vw solid transparent;
+    height: 0;
+    width: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 2;
 }
 
 .footer-group-3 {

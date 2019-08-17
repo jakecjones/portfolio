@@ -13,15 +13,15 @@
     <div :style="{ backgroundColor: $parent.colorOne}" class="line"></div>
   </div>
 
-  <section :class="{navigation: activeNav}" class="container page" :style="{backgroundColor: $parent.contrastBackground}">
+  <section :class="{navigation: activeNav}" class="container page" :style="{backgroundColor: $parent.backgroundTwo}">
       <img src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
       <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
       <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
 
         <ul>
-          <router-link active-class="active" to="/"><li :style="{ color: $parent.colorTwo}">work</li></router-link>
-          <router-link active-class="active" to="/resume"><li :style="{ color: $parent.colorTwo}">resume</li></router-link>
-          <router-link active-class="active" to="/contact"><li :style="{ color: $parent.colorTwo}">contact</li></router-link>
+          <router-link active-class="active" to="/"><li :style="{ color: $parent.colorOne}">work</li></router-link>
+          <router-link active-class="active" to="/resume"><li :style="{ color: $parent.colorOne}">resume</li></router-link>
+          <router-link active-class="active" to="/contact"><li :style="{ color: $parent.colorOne}">contact</li></router-link>
         </ul>
 <!-- 
                     <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="name" placeholder="name">
@@ -321,6 +321,8 @@ li {
 
 .navigation {
   width: 300px !important;
+  // border-left: 1px solid #aaa;
+  box-shadow: -3px 10px 20px rgba(156, 156, 156, 0.1);
 }
 
 a {
@@ -368,7 +370,7 @@ a {
     font-weight: 100;
     margin-bottom: 2vh;
     padding-bottom: 1vh;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 2px solid #aaa;
   }
 
   // background-color: #000;

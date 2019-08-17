@@ -160,6 +160,10 @@ export default {
           })
           .then((data) => {
             alert('thanks ' + this.name + '!  Jake should be back with you shortly.')
+            this.email = ''
+            this.name = ''
+            this.message = ''
+            this.activeSlide = 1
           })
     }
 }
