@@ -66,6 +66,10 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
+p {
+  orphans: 3 !important;
+  widows: 3 !important;
+}
 * {
   transition: all .35s ease-in-out;
 }

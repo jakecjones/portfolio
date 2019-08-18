@@ -57,7 +57,7 @@
 
       <div class="page-heading">
         <h2 :style="{color: $parent.colorTwo}">Proud Papa.</h2>
-        <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+        <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkward to talk of my achievements in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however like to show you a few problems I have had to solve that makes me very proud to be a web developer. I hope this compilation showcases the diversity and fluidity of my work this past year.</p>
 
       </div>
     </section>
@@ -80,7 +80,7 @@
 
           <div class="section__info">
              <h2 :style="{color: $parent.colorOne}">Augmented Reality.</h2>
-             <p :style="{color: $parent.colorOne}">AR within the web is easily the most exciting tool for me to have worked on and talk about. Ultimatey I was able to create an ecosystem for streamlining the conversion process of flat artwork images into 3d models. This project made use of three.js, SSH, xCode, webGL, javascript, vue.js, firebase and GCP. Feel free to try the free demo on <a href="http://roxyartmarket.com" target="_blank">roxyartmarket.com </a></p>
+             <p :style="{color: $parent.colorOne}">AR within the web is easily the most exciting tool for me to have worked on and talk about. Ultimately I was able to create an ecosystem for streamlining the conversion process of flat artwork images into 3d models. This project made use of three.js, SSH, xCode, webGL, javascript, vue.js, firebase and GCP. Feel free to try the free demo on <a href="http://roxyartmarket.com" target="_blank">roxyartmarket.com </a></p>
           </div>
 
                 <img class="ar-glow" src="/static/neon-ar.svg" alt="jake jones lamp logo">
@@ -93,7 +93,7 @@
           <div class="section__info">
              <h2>Stripe Integration.</h2>
              <p>The day was July 22nd and the time 4:30am. For the first time in my life I had stayed up 48 hours to finish a project, launch a site, and hard code our Stripe payment logic. With a blank sheet of white paper and a sharpie, I was victorious in my feat. 
-             <br><br>My strong suits as a developer have always been frontend development, and since I started this career I was encouraged to stay away from coding payment logic. It was encouraging to put this task under my belt and move forward confidently despite the many challenges I faced.
+             <br><br>My strong suits as a developer have always been frontend development, and since I started this career I was encouraged to stay away from coding payment logic. It was encouraging to put this task under my belt and move forward confidently despite the many challenges I&nbsp;faced.
             </p>
           </div>
           <div class="mockup">
@@ -116,7 +116,7 @@
                 <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
 
           <h2 :style="{color: $parent.colorOne}">Create a platform.</h2>
-          <p :style="{color: $parent.colorOne}">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+          <p :style="{color: $parent.colorOne}">When I started building Roxy Art Market, I was determined to create something that I had never created before. I wanted it to be social media and I wanted it to be an integration tool. I wanted to put my heart and passion into something while having something to show for&nbsp;it.<br><br>I created user profiles with follow and like actions. I created a CMS to manage artwork and dynamic scaling. I created a batch editor for users to update multiple pieces at one time. I created a payment system as mentioned above to manage my subscriptions. I created a sales landing page and the ability for users to quickly emerge themselves in a platform that lets them cast their work into the real&nbsp;world.</p>
         </div>
       </section>
 
@@ -195,6 +195,8 @@ export default {
 <style lang="scss" >
 
 $break-small: 800px;
+$break-med: 1100px;
+
 
   .vue-typer {
   /* Styles for the vue-typer container
@@ -252,12 +254,17 @@ $break-small: 800px;
       }
 
       .decor-glow {
-        width: 200px;
+        width: 180px;
         position: absolute;
-        right: 100px;
-        top: 0;
+        right: 80px;
+        top: -60px;
+        z-index: 200;
         opacity: 1;
         animation: lamp 2s ease-in alternate infinite;
+        @media screen and (max-width: $break-med) {
+          width: 120px;
+          top: -70px;
+        }
       }
 
         .ar-glow {
@@ -515,8 +522,6 @@ $break-small: 800px;
   width: auto;
   margin-left: 100px;
   margin-top: 1em;
-  background-color: #569664;
-  border: 2px solid #569664;
   float: left;
   color: #fff;
   font-weight: 700;
@@ -525,7 +530,11 @@ $break-small: 800px;
   position: relative;
   z-index: 1;
   border-radius: 10px;
-  // box-shadow: 3px 3px 15px #666;
+    &:hover {
+    // background-color: black;
+      // box-shadow: 5px 5px 20px #666;
+
+  }
 }
 
 .sub-section-heading {
@@ -548,6 +557,11 @@ $break-small: 800px;
   background-color: #46ce90;
   color: #fff !important;
 }
+// .profile-section {
+//   .model {
+
+//   }
+// }
 .section {
   height: 600px;
   display: flex;

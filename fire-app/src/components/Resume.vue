@@ -1,37 +1,6 @@
 <template>
   <section class="display">
 
-    <!-- <div class="slider" :style="{backgroundColor: $parent.backgroundOne}" >
-      <div class="slantLeft" :style="{borderBottom: ' 50px solid ' + $parent.contrastBackground}"></div>
-
-          <div class="slide">
-            
-            <div class="page-heading">
-            <h1 :style="{color: $parent.colorOne}">Resume</h1>
-            <p :style="{color: $parent.colorOne}">Web Developer <br>
-            & Designer
-            </p>
-
-            <router-link to="/contact"><button :style="{backgroundColor: $parent.accentOne, border: $parent.accentOne}">Contact</button></router-link>
-          </div>
-            <div class="svg-container">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 836 1525" style="enable-background:new 0 0 836 1525;" xml:space="preserve">
-
-                <circle class="st0" cx="283" cy="292" r="64"/>
-                <circle class="st0" cx="174" cy="958" r="32"/>
-                <polygon class="st0" points="253.9,613.8 337.4,925.6 565.6,697.4 "/>
-                <polygon class="st0" points="583.6,456 538.2,534.8 629.1,534.8 "/>
-                <polyline class="st0" points="402.6,1354 511.9,1244.7 451.6,1184.4 661,975 "/>
-                </svg>
-                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
-                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
-                <img class="lamp-glow" src="/static/x-glow-01.png" alt="jake jones lamp logo">
-
-            </div>
-          </div>
-    </div> -->
-
     <section class="sub-section-heading" :style="{backgroundColor: '#46ce90'}">
 
       <img class="decor-left" src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
@@ -40,7 +9,7 @@
 
       <div class="page-heading">
         <h2>Resume</h2>
-        <p class="description">I sometimes find it quite awkard to talk of my achievments in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however llke to show you a few problems I have had to solve that make me very proud to be a web deveoloper.</p>
+        <p class="description">What you will find below is a compilation of the things that I have learned since I began Web Development in August of 2016. I didn’t start this career until I was 24 but I have been inspired by and projects I get to work on each day. I listen to podcasts like Front End Happy Hour, Developer Tea and Dribbble’s Overtime to help me maintain a positive perspective on the career field and how I can maintain a humble attitude in the work environment.</p>
 
       </div>
       <div class="slantRight" :style="{borderBottom: ' 50px solid ' + $parent.backgroundTwo}"></div>
@@ -48,12 +17,14 @@
     </section>
 
     <section class="resume section" :style="{backgroundColor: $parent.backgroundTwo, color: $parent.colorOne}">
-                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
-                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
-                <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
+      <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
+      <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
+      <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
       <div class="group">
         <h3>Experience</h3>
         <h4>Roxy Art Market</h4>
+        <h5>August 2018 - Present</h5>    
+
         <p>UX/UI</p>
         <p>3D model automation</p>
         <p>Front-end development</p>
@@ -62,15 +33,20 @@
         <p>API integration</p>
 
         <h4>Bahlr Media</h4>
+        <h5>May 2018 - August 2018</h5> 
+
         <p>Front-end Development</p>
         <p>Craft CMS Development</p>
         <p>Shopify Development</p>
 
         <h4>Bixell Design Studio</h4>
+        <h5>January 2016 - Present</h5> 
+
         <p>Front-end Development</p>
         <p>Logo Design</p>
         <p>Branding</p>
       </div>
+
       <div class="group">
         <h3>Education</h3>
         <h4>North Idaho College</h4>
@@ -78,23 +54,35 @@
         <p>Associates of Arts</p>
 
         <h3>Tools</h3>
+
+        <h4>Used often</h4>
         <p>HTML5</p>
         <p>CSS3</p>
+        <p>SCSS</p>
         <p>Javascript</p>
         <p>Node.js</p>
         <p>Vue.js</p>
-        <p>Webpack</p>
-        <p>Three.js</p>
-        <p>SCSS</p>
-        <p>NPM</p>
+        <p>npm</p>
+        <p>Git</p>
         <p>Firebase</p>
+        <p>GCP</p>
+        <p>Webpack</p>
+        <p>SVG Animation</p>
+
+        <h4>Used/learning</h4>
+        <p>Three.js</p>
+        <p>Axios</p>
         <p>Webhooks</p>
-        <p>GIT</p>
-        <p>Craft CMS</p>
-        <p>Shopify</p>
         <p>PHP</p>
         <p>WebGL</p>
-        <p>SVG Animation</p>
+
+        <h4>Next to learn</h4>
+        <p>React/React Native</p>
+        <p>Tensorflow.js</p>
+        <p>D3.js</p>
+
+
+
       </div>
 
       <div class="group">
@@ -337,7 +325,7 @@ $break-small: 800px;
 
     // justify-content: center;
 
-    h3, h4, p {
+    h3, h4, h5, p {
       font-size: 3vw;
       margin: 0 auto;
       width: 90%;
@@ -351,8 +339,14 @@ $break-small: 800px;
     }
     h4 {
       font-size: 2vw;
-      margin-bottom: 2vh;
+      margin-bottom: 0;
       margin-top: 4vh;
+    }
+    h5 {
+      font-size: 1vw;
+      margin-bottom: 2vh;
+      margin-top: 0;
+      font-style: italic;
     }
     p {
       font-size: 16px;
@@ -366,6 +360,12 @@ $break-small: 800px;
       }
       h4 {
         font-size: 4vw;
+      }
+      h5 {
+        font-size: 2vw;
+        margin-bottom: 2vh;
+        margin-top: 0;
+        font-style: italic;
       }
       p {
         font-size: 4vw;

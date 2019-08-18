@@ -13,15 +13,11 @@
     <div :style="{ backgroundColor: $parent.colorOne}" class="line"></div>
   </div>
 
-  <section :class="{navigation: activeNav}" class="container page" :style="{backgroundColor: $parent.backgroundTwo}">
-      <img src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
-      <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
-      <img src="/static/neon-decor-2.png" alt="jake jones lamp logo">
-
+  <section :class="{navigation: activeNav}" class="container page">
         <ul>
-          <router-link active-class="active" to="/"><li :style="{ color: $parent.colorOne}">work</li></router-link>
-          <router-link active-class="active" to="/resume"><li :style="{ color: $parent.colorOne}">resume</li></router-link>
-          <router-link active-class="active" to="/contact"><li :style="{ color: $parent.colorOne}">contact</li></router-link>
+          <router-link active-class="active" to="/"><li>work</li></router-link>
+          <router-link active-class="active" to="/resume"><li>resume</li></router-link>
+          <router-link active-class="active" to="/contact"><li>contact</li></router-link>
         </ul>
 <!-- 
                     <input :style="{backgroundColor: $parent.backgroundTwo}" type="text" v-model="name" placeholder="name">
@@ -152,25 +148,42 @@ export default {
   padding: 0 5px 5px 5px;
   display: flex;
   flex-direction: column;
-}
-.nav-button .line {
-  width: 90%;
-  height: 3px;
-  background-color: #444;
-  margin: 3px;
-  border-radius: 10px;
+
+  .line {
+    width: 90%;
+    height: 3px;
+    background-color: #444;
+    margin: 3px;
+    border-radius: 10px;
+  }
+
+  .line:nth-child(1) {
+    width: 40%;
+    align-self: flex-end;
+  }
+  .line:nth-child(2) {
+    width: 100%;
+  }
+  .line:nth-child(3) {
+    width: 40%;
+  }
+
+  &:hover {
+    .line:nth-child(1) {
+     width: 20%;
+    }
+    .line:nth-child(2) {
+     width: 80%;
+    }
+    .line:nth-child(3) {
+     width: 20%;
+    }
+  }
+
 }
 
-.nav-button .line:nth-child(1) {
-  width: 40%;
-  align-self: flex-end;
-}
-.nav-button .line:nth-child(2) {
-  width: 100%;
-}
-.nav-button .line:nth-child(3) {
-  width: 40%;
-}
+
+
 
 header {
   width: 100%;
@@ -337,6 +350,8 @@ a {
 
 .container {
   transition: .3s ease-in-out;
+  background-color: #333;
+  color: #fff;
   margin: 65px auto 0 auto;
   padding: 50px 0;
   height: calc(100% - 65px);
