@@ -101,6 +101,9 @@ export default {
 
 <style lang="scss" scoped>
 
+$break-small: 800px;
+
+
 .dark-mode {
   position: fixed;
   top: 25px;
@@ -178,6 +181,19 @@ export default {
     .line:nth-child(3) {
      width: 20%;
     }
+    @media screen and (max-width: $break-small) {
+      .line:nth-child(1) {
+        width: 40%;
+        align-self: flex-end;
+      }
+      .line:nth-child(2) {
+        width: 100%;
+      }
+      .line:nth-child(3) {
+        width: 40%;
+      }
+    }
+
   }
 
 }

@@ -50,16 +50,34 @@
     </div>
 
     <section class="sub-section-heading" :style="{backgroundColor: $parent.contrastBackground}">
+      <div v-if="showCode" class="code-block">
+        <div class="html" :style="{color: $parent.colorTwo}">
+          <span nowrap>&lt;section> class="sub-section-heading" :style="{backgroundColor: $parent.contrastBackground}"><br></span>
+          &nbsp;&lt;h2> :style="{color: $parent.colorTwo}">Proud Papa.&lt;/h2><br>
+          &nbsp;&lt;p class="description" :style="{color: $parent.colorTwo}">...&lt;p><br>
+          &lt;/section>
+        </div>
+
+        </div>
 
       <img class="decor-left" src="/static/neon-decor-2.svg" alt="jake jones lamp logo">
       <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
       <img class="decor-left" src="/static/neon-decor-2.png" alt="jake jones lamp logo">
 
-      <div class="page-heading">
+      <div v-if="!showCode" class="page-heading">
         <h2 :style="{color: $parent.colorTwo}">Proud Papa.</h2>
-        <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkward to talk of my achievements in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would however like to show you a few problems I have had to solve that makes me very proud to be a web developer. I hope this compilation showcases the diversity and fluidity of my work this past year.</p>
+        <p class="description" :style="{color: $parent.colorTwo}">I sometimes find it quite awkward to talk of my achievements in my career. It’s hard to say “I’m the best at this,” or “I’m really great at that.” I would; however, like to show you a few problems I have had to solve that makes me very proud to be a web developer. I hope this compilation showcases the diversity and fluidity of my work this past year.</p>
 
       </div>
+
+      <div 
+        :style="{backgroundColor: $parent.backgroundOne, color: $parent.colorOne}"
+        @mouseover="showCode = !showCode" 
+        @mouseleave="showCode = !showCode" 
+        class="code-icon">  
+          &lt;/>  
+      </div>
+
     </section>
 
     <section class="section ar-section" :style="{backgroundColor: $parent.backgroundOne}">
@@ -78,10 +96,27 @@
           >
           </model-viewer>
 
-          <div class="section__info">
+          <div v-if="!showCode" class="section__info">
              <h2 :style="{color: $parent.colorOne}">Augmented Reality.</h2>
              <p :style="{color: $parent.colorOne}">AR within the web is easily the most exciting tool for me to have worked on and talk about. Ultimately I was able to create an ecosystem for streamlining the conversion process of flat artwork images into 3d models. This project made use of three.js, SSH, xCode, webGL, javascript, vue.js, firebase and GCP. Feel free to try the free demo on <a href="http://roxyartmarket.com" target="_blank">roxyartmarket.com </a></p>
           </div>
+
+          <div v-if="showCode" class="section__info">
+            <div class="code-block" :style="{color: $parent.colorOne}">
+            &lt;div class="section__info"><br>
+              &nbsp;&lt;h2 :style="{color: $parent.colorOne}">Augmented Reality.&nbsp;&lt;/h2><br>
+              &nbsp;&lt;p :style="{color: $parent.colorOne}">&lt;a>...&lt;/a>&lt;/p><br>
+             &lt;/div><br>
+             </div>
+          </div>
+
+        <div 
+          :style="{backgroundColor: $parent.backgroundOne, color: $parent.colorOne}"
+          @mouseover="showCode = !showCode" 
+          @mouseleave="showCode = !showCode" 
+          class="code-icon">  
+            &lt;/>  
+        </div>
 
                 <img class="ar-glow" src="/static/neon-ar.svg" alt="jake jones lamp logo">
                 <img class="ar-glow" src="/static/neon-ar-glow.png" alt="jake jones lamp logo">
@@ -90,16 +125,37 @@
       </section>
 
       <section class="section stripe-section">
-          <div class="section__info">
+          <div v-if="!showCode" class="section__info">
              <h2>Stripe Integration.</h2>
              <p>The day was July 22nd and the time 4:30am. For the first time in my life I had stayed up 48 hours to finish a project, launch a site, and hard code our Stripe payment logic. With a blank sheet of white paper and a sharpie, I was victorious in my feat. 
-             <br><br>My strong suits as a developer have always been frontend development, and since I started this career I was encouraged to stay away from coding payment logic. It was encouraging to put this task under my belt and move forward confidently despite the many challenges I&nbsp;faced.
+             <br><br>My strong suits as a developer have always been front-end development, and since I started this career, I was encouraged to stay away from coding payment logic. It was encouraging to put this task under my belt and move forward confidently despite the many challenges I&nbsp;faced.
             </p>
           </div>
+          <div v-if="showCode" class="section__info ">
+            <div class="code-block">
+            &lt;section class="section stripe-section"><br>
+                &nbsp;&lt;div v-if="showCode" class="section__info"><br>
+                  &nbsp;&nbsp;&lt;h2>Stripe Integration.&lt/h2><br>
+                  &nbsp;&nbsp;&nbsp;&lt;p>...&lt;/p><br>
+                &nbsp;&nbsp;&lt;/div><br>
+                &lt;/section><br>
+             </div>
+          </div>
+          
           <div class="mockup">
             <img src="/static/stripe-example.png">
           </div>
           <div class="slantRight" :style="{borderBottom: ' 100px solid' + $parent.backgroundTwo }"></div>
+                
+                
+      <div 
+        :style="{backgroundColor: $parent.backgroundOne, color: $parent.colorOne}"
+        @mouseover="showCode = !showCode" 
+        @mouseleave="showCode = !showCode" 
+        class="code-icon">  
+          &lt;/>  
+      </div>
+
       </section>
 
       <section class="section profile-section " :style="{backgroundColor: $parent.backgroundTwo}">
@@ -107,16 +163,34 @@
         <div class="model">
           <img src="/static/profile-mockup.png">
         </div>
-
-        <div class="section__info">
-
-                <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
+                        <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
                 <img class="decor-glow" src="/static/decor-glow.png" alt="jake jones lamp logo">
 
                 <img class="decor-glow" src="/static/decor.svg" alt="jake jones lamp logo">
 
+        <div v-if="!showCode" class="section__info">
+
+
+
           <h2 :style="{color: $parent.colorOne}">Create a platform.</h2>
           <p :style="{color: $parent.colorOne}">When I started building Roxy Art Market, I was determined to create something that I had never created before. I wanted it to be social media and I wanted it to be an integration tool. I wanted to put my heart and passion into something while having something to show for&nbsp;it.<br><br>I created user profiles with follow and like actions. I created a CMS to manage artwork and dynamic scaling. I created a batch editor for users to update multiple pieces at one time. I created a payment system as mentioned above to manage my subscriptions. I created a sales landing page and the ability for users to quickly emerge themselves in a platform that lets them cast their work into the real&nbsp;world.</p>
+        </div>
+
+        <div v-if="showCode" class="section__info">
+          <div class="code-block" :style="{color: $parent.colorOne}">
+              &lt;div class="section__info"><br>
+
+                &nbsp;&lt;h2 :style="{color: $parent.colorOne}">Create a platform.&lt;/h2><br>
+                &nbsp;&lt;p :style="{color: $parent.colorOne}">...&lt;/p><br>
+              &lt;/div>
+              </div>
+        </div>
+        <div 
+          :style="{backgroundColor: $parent.backgroundOne, color: $parent.colorOne}"
+          @mouseover="showCode = !showCode" 
+          @mouseleave="showCode = !showCode" 
+          class="code-icon">  
+            &lt;/>  
         </div>
       </section>
 
@@ -143,6 +217,7 @@ export default {
   name: 'heroSection',
   data () {
     return {
+      showCode: false,
       title: null,
       button: null,
       link: null,
@@ -333,6 +408,25 @@ $break-med: 1100px;
 <style lang="scss" scoped>
 
 $break-small: 800px;
+$break-med: 1000px;
+
+@keyframes shadow-pulse
+{
+  0% {
+      box-shadow: 0 0 0 0px rgba(200, 200, 200, 0.2);
+      filter: blur(0)
+  }
+  15% {
+      filter: blur(0.25px)
+  }
+  100% {
+      box-shadow: 0 0 0 35px rgba(200, 200, 200, 0);
+      filter: blur(0)
+
+  }
+}
+
+
 
 
 * {
@@ -530,11 +624,7 @@ $break-small: 800px;
   position: relative;
   z-index: 1;
   border-radius: 10px;
-    &:hover {
-    // background-color: black;
-      // box-shadow: 5px 5px 20px #666;
 
-  }
 }
 
 .sub-section-heading {
@@ -542,17 +632,71 @@ $break-small: 800px;
   height: 400px;
   margin: 0;
   padding: 2em 0;
-
   display: flex;
   justify-content: center;  
   position: relative;
+
   h2 {
     margin: 0 auto;
     width: 70%;
     max-width: 1000px;
   }
 
+  .code-block {
+    position: absolute;
+    width: 80%;
+    overflow-x: scroll;
+    text-align: left;
+    font-family: monospace;
+    font-size: 16px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    padding: 1.4em;
+    align-self: center;
+    justify-self: center;        
+    transition: none;
+
+    .html {
+      text-align: left;
+    }
+
+    @media screen and (max-width: $break-small) {
+        width: 85%;
+        transition: none;
+  }
+
+  }
+
+
+
+    .code-icon {
+      animation: shadow-pulse 2s infinite;
+      position: absolute;
+      background-color: #fff;
+      font-family: 'avenir', 'nunito sans', sans-serif;
+      font-weight: 900;
+      bottom: 20px;
+      left: 20px;
+      width: 6vh;
+      height: 4vh;
+      font-size: 2vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 9999;
+      @media screen and (max-width: $break-med) {
+        display: none;
+      }
+
+    }
 }
+
 .stripe-section {
   background-color: #46ce90;
   color: #fff !important;
@@ -567,6 +711,51 @@ $break-small: 800px;
   display: flex;
   flex-direction: row;
   position: relative;
+
+  .code-block {
+    position: relative;
+    width: 80%;
+    overflow-x: scroll;
+    text-align: left;
+    font-family: monospace;
+    font-size: 16px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    padding: 1.4em;
+    .html {
+      text-align: left;
+    }
+
+    @media screen and (max-width: $break-small) {
+        width: 85%;
+        transition: none;
+  }
+    }
+
+  .code-icon {
+    animation: shadow-pulse 2s infinite;
+    position: absolute;
+    background-color: #fff;
+    font-family: 'avenir', 'nunito sans', sans-serif;
+    font-weight: 900;
+    bottom: 20px;
+    left: 20px;
+    width: 6vh;
+    height: 4vh;
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 9999;
+    @media screen and (max-width: $break-med) {
+      display: none;
+    }
+  }
 
   .model {
     width: 50%;

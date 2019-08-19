@@ -9,7 +9,7 @@
 
       <div class="page-heading">
         <h2>Resume</h2>
-        <p class="description">What you will find below is a compilation of the things that I have learned since I began Web Development in August of 2016. I didn’t start this career until I was 24 but I have been inspired by and projects I get to work on each day. I listen to podcasts like Front End Happy Hour, Developer Tea and Dribbble’s Overtime to help me maintain a positive perspective on the career field and how I can maintain a humble attitude in the work environment.</p>
+        <p class="description">What you will find below is a compilation of the things that I have learned since I began Web Development in August of 2016. I didn’t start this career until I was 24 but I have been inspired by the projects I get to work on every day. I listen to podcasts like Front End Happy Hour, Developer Tea and Dribbble’s Overtime to help me maintain a positive perspective on the career field and how I can maintain a humble attitude in the work environment.</p>
 
       </div>
       <div class="slantRight" :style="{borderBottom: ' 50px solid ' + $parent.backgroundTwo}"></div>
@@ -278,7 +278,7 @@ $break-small: 800px;
             animation: lamp 2s ease-in alternate infinite;
           }
           .decor-left {
-            width: 150px;
+            width: 120px;
             position: absolute;
             right: 20px;
             top: 20px;
@@ -587,6 +587,9 @@ $break-small: 800px;
   p {
     color: #fff !important;
   }
+  @media screen and (max-width: $break-small) {
+    padding: 8em 0 4em 0;
+  }
 
 }
 .stripe-section {
@@ -649,6 +652,7 @@ $break-small: 800px;
 
       flex-direction: column;
       height: auto;
+
       
       .model {
       width: 100%;

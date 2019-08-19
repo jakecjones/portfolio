@@ -494,6 +494,20 @@ $break-small: 800px;
    @media screen and (max-width: $break-small) {
      label {
        width: 280px;
+       .step {
+        width: auto;
+        font-size: 12px;
+        position: absolute;
+        letter-spacing: 2px;
+        right: -30px;
+        top: -10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100%; 
+        color: #fff;
+        font-weight: 100;
+       }
      }
    }
 
