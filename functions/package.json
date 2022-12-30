@@ -18,7 +18,7 @@
     "firebase-admin": "^7.0.0",
     "firebase-functions": "^2.2.0",
     "mailchimp-api-v3": "^1.12.1",
-    "mocha": "^6.0.2",
+    "mocha": "^10.2.0",
     "nodemailer": "^5.1.1",
     "request": "^2.88.0",
     "should": "^13.2.3",
